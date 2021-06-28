@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Regression Suite]">
+  <listeners>
+    <listener class-name="webqa.ensurity.listener.TestListener"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Web-Automation(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="webqa.ensurity.testCases.FourWheeler">
+        <methods>
+          <include name="setup"/>
+          <include name="extentReportsFailOperation"/>
+          <include name="verify4wBreakInPolicyPurchageWithIcici" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- webqa.ensurity.testCases.FourWheeler -->
+    </classes>
+  </test> <!-- Web-Automation(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

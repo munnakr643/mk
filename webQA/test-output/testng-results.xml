@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="20" total="22" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression Suite" duration-ms="491567" started-at="2021-06-28T15:33:20 IST" finished-at="2021-06-28T15:41:32 IST">
+    <groups>
+      <group name="regression">
+        <method signature="FourWheeler.verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018(java.lang.String)[pri:1, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018" class="webqa.ensurity.testCases.FourWheeler"/>
+      </group> <!-- regression -->
+    </groups>
+    <test name="Web-Automation" duration-ms="491567" started-at="2021-06-28T15:33:20 IST" finished-at="2021-06-28T15:41:32 IST">
+      <class name="webqa.ensurity.testCases.FourWheeler">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="setup" is-config="true" duration-ms="7518" started-at="2021-06-28T15:33:20 IST" finished-at="2021-06-28T15:33:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018(java.lang.String)[pri:1, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018" duration-ms="215830" started-at="2021-06-28T15:33:28 IST" data-provider="polType" finished-at="2021-06-28T15:37:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1yrCp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018 -->
+        <test-method status="PASS" signature="extentReportsFailOperation(org.testng.ITestResult)[pri:0, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="extentReportsFailOperation" is-config="true" duration-ms="3" started-at="2021-06-28T15:37:04 IST" finished-at="2021-06-28T15:37:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018 status=SUCCESS method=FourWheeler.verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018(java.lang.String)[pri:1, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportsFailOperation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="tearDown" is-config="true" duration-ms="144" started-at="2021-06-28T15:37:04 IST" finished-at="2021-06-28T15:37:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="setup" is-config="true" duration-ms="4878" started-at="2021-06-28T15:37:04 IST" finished-at="2021-06-28T15:37:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018(java.lang.String)[pri:1, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018" duration-ms="262870" started-at="2021-06-28T15:37:09 IST" data-provider="polType" finished-at="2021-06-28T15:41:32 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1yrTP]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018 -->
+        <test-method status="PASS" signature="extentReportsFailOperation(org.testng.ITestResult)[pri:0, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="extentReportsFailOperation" is-config="true" duration-ms="4" started-at="2021-06-28T15:41:32 IST" finished-at="2021-06-28T15:41:32 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018 status=SUCCESS method=FourWheeler.verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018(java.lang.String)[pri:1, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportsFailOperation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webqa.ensurity.testCases.FourWheeler@8bd1b6a]" name="tearDown" is-config="true" duration-ms="193" started-at="2021-06-28T15:41:32 IST" finished-at="2021-06-28T15:41:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- webqa.ensurity.testCases.FourWheeler -->
+    </test> <!-- Web-Automation -->
+  </suite> <!-- Regression Suite -->
+</testng-results>
