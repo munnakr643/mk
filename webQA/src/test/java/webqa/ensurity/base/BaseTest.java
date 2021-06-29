@@ -2327,7 +2327,7 @@ public class BaseTest {
 		waitFor(2);
 	}
 
-	public void scrollToText1(String text){
+	public void scrollToInsurer(String text){
 		waitFor(1);
 		WebElement element = driver.findElement(By.xpath("//*[contains(@data-locator,'"+text+"')]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);

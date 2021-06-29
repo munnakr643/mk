@@ -48,11 +48,11 @@ public class TwoWheeler extends BaseTest {
     @DataProvider(name = "breakin")
     public static Object[][] breakin() {
         return new Object[][]{
-//                {"Expired within 90 days","1yrCp"},
-//                {"Expired more than 90 days ago","1yrCp"},
+                {"Expired within 90 days","1yrCp"},
+                {"Expired more than 90 days ago","1yrCp"},
                 {"Don’t know previous policy details","1yrCp"},
-//                {"Expired within 90 days","1yrTP"},
-//                {"Expired more than 90 days ago","1yrTP"},
+                {"Expired within 90 days","1yrTP"},
+                {"Expired more than 90 days ago","1yrTP"},
                 {"Don’t know previous policy details","1yrTP"}
         };
     }
@@ -279,7 +279,7 @@ public class TwoWheeler extends BaseTest {
         clickOnNextBtn();
         selectMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate("2015");
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -289,9 +289,8 @@ public class TwoWheeler extends BaseTest {
         isPlanPageDisplayed();
         isPlanPageDisplayed();
         isSelectedPolTypeDisplayed("comprehensive");
-        scrollToButtom();
-//        scrollUpDown(0, 800);
-//        clickOnViewDetailsHdfcErgo();
+        scrollToInsurer("hdfcergo");
+        clickOnViewDetailsHdfcErgo();
         getSubtotal();
         String idv=getIdvAmount();
         String premiumAnnualy=getPremiumAmount();
@@ -1008,6 +1007,102 @@ public class TwoWheeler extends BaseTest {
         isTotalPremiumEqualTo(premiumAnnualy);
         if (!policyType.equalsIgnoreCase("5tp")){
         isIDVEqualTo(idv);}
+        clickOnMakePayment();
+        String parentWindow = driver.getWindowHandle();
+        switchToChildWindow();
+        isDigitPaymentPageDisplayed();
+        enterDigitPaymentDetailsAndProceed("5123456789012346","123","11","22","Rahul Singh");
+        isPaymentSuccessPageDisplayed();
+        refreshPage();
+        closeCurrentTab();
+        switchToTab(parentWindow);
+        logger.info(driver.getCurrentUrl());
+        refreshPage();
+        isPolicyDownloadPageDisplayed();
+        waitFor(2);
+        clickOnDownloadPolicy();
+        waitFor(5);
+        if (isPolicyDownloadMessageDispalyed()){
+            policyDownloadMessage();
+        }else {
+            driver.get("chrome://downloads/");
+            waitFor(3);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            WebElement e= (WebElement) js.executeScript(" return document.querySelector('body > downloads-manager').shadowRoot.querySelector('#frb0').shadowRoot.querySelector('#url')");
+            logger.info(e.getAttribute("href"));
+            String pdfurl=e.getAttribute("href");
+            waitFor(1);
+            readPdfContent(pdfurl);}
+    }
+
+    @Test(priority = 1, groups = {"regression"}, dataProvider = "ncb")
+    public void verify2wRolloverPolicyPurchageWithDigitBeforeJuly2018withDiffrentNcb(String ncb) throws IOException {
+        logger.info("This test validates verifyRolloverPolicyPurchageWithHdfcErgo using " + ncb + " ncb");
+        ExtentTestManager.getTest().setDescription("This test validates verifyRolloverPolicyPurchageWithHdfcErgo using " + ncb + " ncb");
+        entreUserName();
+        clickOnProceedBtn();
+        enterOtp();
+        clickOnProceedBtnAfterOtp();
+        isHomePageScreenDisplay();
+        selectTwoWheeler();
+        enterCustomerName("webQA"+time());
+        clickOnNextBtn();
+        selectMMV();
+        rtoLocation();
+        selectRegistrationDate("2015");
+        clickOnNext();
+        notExpYet();
+        prevPolicyClaim("No");
+        prevNcbPercent(ncb);
+        selectPrevInsurer();
+        clickOngenerateQuote();
+        isPlanPageDisplayed();
+        isPlanPageDisplayed();
+        isSelectedPolTypeDisplayed("comprehensive");
+        clickOnViewDetailsDigit();
+        getSubtotal();
+        String idv=getIdvAmount();
+        String premiumAnnualy=getPremiumAmount();
+        verify18percentGstAmt(get18percentGstAmt());
+        verifyPremiumAmount(getSubTotalWith18percentGst());
+        buyNowAction();
+        enterFirstName("Ravin");
+        enterMiddleName("Raj");
+        enterLastName("Sharma");
+        selectDobAction("1993");
+        selectGender("Male");
+        enterEmailId("ensuredit@gmail.com");
+        enterPhone("6367357113");
+        clickOnNext();
+        enterPermAddress("Church road");
+        enterPincode("400001");
+        selectState("Maharashtra");
+        selectCity("Mumbai");
+        selectDistrict("Mumbai");
+        selectCountry();
+        clickOnNextButton();
+        enterNomineeFirstName("Rahul");
+        enterNomineeMiddleName("Singh");
+        enterNomineeLastName("Kanwar");
+        selectDobAction("1997");
+        enterTextAction("Male",1);
+        selectFromDropDown("Brother");
+        clickOnNextButton();
+        entervehicleNumer("MH01AD" + randomeNum());
+        //  entervehicleNumer("MH01AD5261");
+        selcectManufactureDate("2015");
+        enterChassisNumber("CH1234567" + randomeNum8());
+        enterEngineNumber("EN1234567" + randomeNum8());
+        clickOnNextButton();
+        selectFromDropDown("Bharti");
+        enterPrevPolicyNum("AR00" + randomeNum8());
+        selectExpiryDate("2021");
+        clickOnNext();
+        clickOnReviewNSubmit();
+        waitFor(1);
+        isPaymentPageDisplayed();
+        isTotalPremiumEqualTo(premiumAnnualy);
+        isIDVEqualTo(idv);
         clickOnMakePayment();
         String parentWindow = driver.getWindowHandle();
         switchToChildWindow();

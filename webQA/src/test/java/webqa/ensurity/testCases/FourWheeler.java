@@ -32,9 +32,9 @@ public class FourWheeler extends BaseTest {
     public static Object[][] breakin() {
         return new Object[][]{
                 {"Expired within 90 days","1yrCp"},
-//                {"Expired more than 90 days ago","1yrCp"},{"Don’t know previous policy details","1yrCp"},
+                {"Expired more than 90 days ago","1yrCp"},{"Don’t know previous policy details","1yrCp"},
                 {"Expired within 90 days","1yrTP"},
-//                {"Expired more than 90 days ago","1yrTP"},{"Don’t know previous policy details","1yrTP"}
+                {"Expired more than 90 days ago","1yrTP"},{"Don’t know previous policy details","1yrTP"}
         };
     }
 
@@ -86,7 +86,7 @@ public class FourWheeler extends BaseTest {
 //        if (policyType.equalsIgnoreCase("3tp")){
 //            clickBuyNowHdfcErgo();
 //        }else {
-        scrollToText1("hdfcergo");
+        scrollToInsurer("hdfcergo");
         clickOnViewDetailsHdfcErgo();
         getSubtotal();
         buyNowAction();
@@ -1356,7 +1356,7 @@ public class FourWheeler extends BaseTest {
         clickOngenerateQuote();
         isPlanPageDisplayed();
         isSelectedPolTypeDisplayed(policyType);
-        scrollToText1("futureGenerali");
+        scrollToInsurer("futureGenerali");
         clickOnViewDetailsfutureGeneral();
         getSubtotal();
         String idv=getIdvAmount();
@@ -1456,7 +1456,7 @@ public class FourWheeler extends BaseTest {
         }
         isPlanPageDisplayed();
         isSelectedPolTypeDisplayed(policyType);
-        scrollToText1("futureGenerali");
+        scrollToInsurer("futureGenerali");
         clickOnViewDetailsfutureGeneral();
         getSubtotal();
         String idv="";
