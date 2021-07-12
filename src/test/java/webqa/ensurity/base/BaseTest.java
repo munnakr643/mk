@@ -251,8 +251,8 @@ public class BaseTest {
 	
 
 	public void enterOtp() {
-		waitElement(loginPage.proceed, 3);
-		assertThat(loginPage.otpbox1.isDisplayed(), equalTo(true));
+//		waitElement(loginPage.proceed, 7);
+//		assertThat(loginPage.otpbox1.isDisplayed(), equalTo(true));
 		String otp=readconfig.getPassword();
 		for(int i=1;i<=otp.length();i++){
 			String num= String.valueOf(otp.charAt(i-1));
