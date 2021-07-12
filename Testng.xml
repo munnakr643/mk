@@ -19,9 +19,9 @@
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerICICI_L" />-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerReliance" >-->
 
-				<methods>
-					<include name="verify2wRolloverPolicyPurchageWithTataAig"></include>
-				</methods>
+<!--				<methods>-->
+<!--					<include name="verify2wRolloverPolicyPurchageWithTataAig"></include>-->
+<!--				</methods>-->
 			</class>
 		</classes>
 
