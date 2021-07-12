@@ -80,7 +80,7 @@ public class BaseTest {
 			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--incognito");
-//			options.addArguments("--headless");
+			options.addArguments("--headless");
 			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(capabilities);
