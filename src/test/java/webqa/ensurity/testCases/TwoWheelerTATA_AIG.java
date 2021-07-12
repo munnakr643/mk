@@ -214,6 +214,7 @@ public class TwoWheelerTATA_AIG extends BaseTest {
         entervehicleNumer("MH-01-AD-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
+        selectYesNo("Yes");
         clickOnNextButton();
         if(polExpType.contains("90")){
             selectFromDropDown("Bharti");
