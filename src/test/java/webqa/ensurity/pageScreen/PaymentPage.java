@@ -325,5 +325,8 @@ public class PaymentPage extends ScreenManager {
 	@CacheLookup
 	public WebElement premiumTotalPaymentPage;
 
+	@FindBy(xpath = "//span[text()='Comprehensive'] | //span[text()='SAOD']| //span[text()='Third Party']|//*[contains(text(),'TP')]")
+	@CacheLookup
+	public WebElement cpPolTypePaymentPage;
 }
 

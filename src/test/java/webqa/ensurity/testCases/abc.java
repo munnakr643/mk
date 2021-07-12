@@ -64,9 +64,10 @@ public class abc {
 
         public static void time(){
             Calendar cal = Calendar.getInstance();
-            cal.add(Calendar.DATE, 10);
+            cal.add(Calendar.DATE, -100);
+            cal.add(Calendar.YEAR, 0);
             Date date = cal.getTime();
-            SimpleDateFormat format1 = new SimpleDateFormat("ddMMyyyy");
+            SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
             String date1 = format1.format(date);
             System.out.println(date1);
         }
@@ -78,4 +79,19 @@ public class abc {
             System.out.println(srrt.charAt(i));
         }
     }
+
+    public static int solution(String S) {
+        int[] arr = new int[26];
+        for(int i=0;i<S.length();i++)
+        {
+            arr[(int)S.charAt(i)-65]++;
+        }
+        int a=arr[0];
+        int b=arr[1];
+        int l=arr[11]/2;
+        int n=arr[13];
+        int o=arr[14]/2;
+        return Math.min(Math.min(Math.min(a, b),Math.min(l, n)),o);
+    }
+
 }

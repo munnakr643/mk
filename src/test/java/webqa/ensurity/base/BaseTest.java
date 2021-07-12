@@ -80,10 +80,7 @@ public class BaseTest {
 			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--incognito");
-			options.addArguments("--headless");
-			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-			driver = new ChromeDriver(capabilities);
+			driver = new ChromeDriver(options);
 		} else if (br.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", readconfig.getFirefoxPath());
 			driver = new FirefoxDriver();
@@ -881,9 +878,16 @@ public class BaseTest {
 		proposalPage.date.sendKeys(date1);
 	}
 
+	public void enterDate(String ddmmyyyy){
+		waitElement(proposalPage.date,3);
+		assertThat(proposalPage.date.isDisplayed(), equalTo(true));
+		proposalPage.date.sendKeys(ddmmyyyy);
+	}
+
+
 	public void isSelectedPolTypeDisplayed(String polType) {
 		waitFor(1);
-		if (polType.equalsIgnoreCase("saod")|polType.equalsIgnoreCase("Bundle")|polType.equalsIgnoreCase("3yrTP")){
+		if (polType.equalsIgnoreCase("saod")|polType.equalsIgnoreCase("Bundle")|polType.equalsIgnoreCase("3yrTP")|polType.equalsIgnoreCase("5yrTP")){
 			waitElement(quotePage.polTypeOD, 30);
 			assertThat(quotePage.polTypeOD.isDisplayed(), equalTo(true));
 			assertThat(quotePage.insPolTypeOD.isDisplayed(), equalTo(true));
@@ -988,17 +992,19 @@ public class BaseTest {
 	}
 
 	public void isPlanPageDisplayed(){
-		waitElement(quotePage.viewDetails, 120);
+		waitElement(quotePage.viewDetails, 90);
 		waitElement(quotePage.motorProfile, 3);
 		assertThat(quotePage.motorProfile.isDisplayed(), equalTo(true));
 		assertThat(quotePage.polTypePlanPage.isDisplayed(), equalTo(true));
 		assertThat(quotePage.idv.isDisplayed(), equalTo(true));
 		assertThat(quotePage.bestMatch.isDisplayed(), equalTo(true));
 		assertThat(quotePage.addOns.isDisplayed(), equalTo(true));
+		logger.info("verify appearance of plan page successfully");
 		logger.info("Quote Name - "+quotePage.motorProfile.getText());
-		logger.info("Quote Name - "+quotePage.motorProfile.getText());
+		logger.info(driver.getCurrentUrl());
 		ExtentTestManager.getTest().log(LogStatus.PASS, "verify appearance of plan page successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "Quote Name - "+quotePage.motorProfile.getText());
+		ExtentTestManager.getTest().log(LogStatus.PASS, driver.getCurrentUrl());
 	}
 
 
@@ -1718,13 +1724,23 @@ public class BaseTest {
 
 	public void isPaymentPageDisplayed(){
 		waitingForPaymentPage();
-		waitElement(paymentPage.companyLogo, 70);
+		waitElement(paymentPage.cpPolTypePaymentPage, 70);
+		assertThat(paymentPage.companyLogo.isDisplayed(), equalTo(true));
 		assertThat(paymentPage.backHome.isDisplayed(), equalTo(true));
 		assertThat(paymentPage.makePayment.isDisplayed(), equalTo(true));
 		assertThat(paymentPage.copyPaymentLink.isDisplayed(), equalTo(true));
 		assertThat(paymentPage.proposalCreated.isDisplayed(), equalTo(true));
 		logger.info("PaymentPage verified successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "PaymentPage verified successfully");
+	}
+
+	public void isBreakingPaymentPageDisplayed(){
+		waitingForPaymentPage();
+		waitElement(paymentPage.cpPolTypePaymentPage, 70);
+		assertThat(paymentPage.companyLogo.isDisplayed(), equalTo(true));
+		assertThat(paymentPage.makePayment.isDisplayed(), equalTo(true));
+		logger.info("breaking inspection PaymentPage verified successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "breaking inspection PaymentPage verified successfully");
 	}
 
 	public void clickOnMakePayment(){
@@ -1831,7 +1847,8 @@ public class BaseTest {
 		refreshPage();
 		waitFor(5);
 		enterTextAction("Download policy",1);
-		waitFor(12);
+		waitFor(2);
+		waitingForDownloadPlicy();
 		logger.info("clicked on downloadPolicy successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "clicked on downloadPolicy successfully");
 	}
@@ -1861,12 +1878,16 @@ public class BaseTest {
 	}
 
 	public void prevPolStartDate(String year) {
+		SimpleDateFormat df = new SimpleDateFormat("dd");
+		String formatted = df.format(new Date());
+		int currentDate=Integer.parseInt(formatted);
 		waitFor(1);
 		clickOnChooseDate2(6);
 		waitFor(1);
 		driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
 		waitFor(1);
-		nextMonthAction();
+		if(currentDate>=15){
+			nextMonthAction();}
 		waitFor(1);
 		enterTextAction("17",1);
 		logger.info("Date selected successfully");
@@ -1927,7 +1948,7 @@ public class BaseTest {
 
 	public String time(){
 		LocalDateTime myDateObj = LocalDateTime.now();
-		DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("HH_mm");
+		DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddHH_mm");
 		String formattedDate = myDateObj.format(myFormatObj);
 		return formattedDate;
 	}
@@ -2043,7 +2064,7 @@ public class BaseTest {
 
 	public boolean isPolicyDownloadMessageDispalyed(){
 		try {
-			waitElement(policyDownloadPage.insurerDownloadMessage, 12);
+			waitElement(policyDownloadPage.insurerDownloadMessage, 3);
 			assertThat(policyDownloadPage.insurerDownloadMessage.isDisplayed(),equalTo(true));
 			return true;
 		}catch (Exception e){
@@ -2313,6 +2334,8 @@ public class BaseTest {
 					waitFor(3);
 				}
 				else {
+					logger.info(driver.getCurrentUrl());
+					ExtentTestManager.getTest().log(LogStatus.PASS, driver.getCurrentUrl());
 					break;
 				}
 			}catch (Exception e){}
@@ -2381,6 +2404,27 @@ public class BaseTest {
 		doc.close();
 	}
 
+	public boolean isPleaseWaitDispaly(){
+		try {
+			waitElement(policyDownloadPage.pleaseWait, 3);
+			assertThat(policyDownloadPage.pleaseWait.isDisplayed(),equalTo(true));
+			return true;
+		}catch (Exception e){
+			return false;
+		}
+	}
 
+
+	public void waitingForDownloadPlicy(){
+		for(int i=0;i<30;i++){
+				if (isPleaseWaitDispaly()){
+					waitFor(3);
+				}
+				else {
+					break;
+				}
+
+		}
+	}
 
 }

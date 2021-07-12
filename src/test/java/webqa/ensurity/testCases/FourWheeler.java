@@ -313,30 +313,35 @@ public class FourWheeler extends BaseTest {
         waitFor(3);
         isTotalPremiumEqualTo(premiumAnnualy);
         if (!policyType.equalsIgnoreCase("1yrTP")){
-            isIDVEqualTo(idv);}
-        clickOnMakePayment();
-        String parentWindow = driver.getWindowHandle();
-        switchToChildWindow();
-        waitElement(paymentPage.sendAnyway,70);
-        enterHdfcPaymentDetails("5123456789012346","123");
-        refreshPage();
-        switchToTab(parentWindow);
-        refreshPage();
-        isPolicyDownloadPageDisplayed();
-        waitFor(3);
-        clickOnDownloadPolicy();
-        waitFor(3);
-        if (isPolicyDownloadMessageDispalyed()){
-            policyDownloadMessage();
+            isBreakingPaymentPageDisplayed();
+            isTotalPremiumEqualTo(premiumAnnualy);
+            isIDVEqualTo(idv);
         }else {
-            driver.get("chrome://downloads/");
+            clickOnMakePayment();
+            String parentWindow = driver.getWindowHandle();
+            switchToChildWindow();
+            waitElement(paymentPage.sendAnyway, 70);
+            enterHdfcPaymentDetails("5123456789012346", "123");
+            refreshPage();
+            switchToTab(parentWindow);
+            refreshPage();
+            isPolicyDownloadPageDisplayed();
             waitFor(3);
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            WebElement e= (WebElement) js.executeScript(" return document.querySelector('body > downloads-manager').shadowRoot.querySelector('#frb0').shadowRoot.querySelector('#url')");
-            logger.info(e.getAttribute("href"));
-            String pdfurl=e.getAttribute("href");
-            waitFor(1);
-            readPdfContent(pdfurl);}
+            clickOnDownloadPolicy();
+            waitFor(3);
+            if (isPolicyDownloadMessageDispalyed()) {
+                policyDownloadMessage();
+            } else {
+                driver.get("chrome://downloads/");
+                waitFor(3);
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                WebElement e = (WebElement) js.executeScript(" return document.querySelector('body > downloads-manager').shadowRoot.querySelector('#frb0').shadowRoot.querySelector('#url')");
+                logger.info(e.getAttribute("href"));
+                String pdfurl = e.getAttribute("href");
+                waitFor(1);
+                readPdfContent(pdfurl);
+            }
+        }
 
     }
 

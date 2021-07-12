@@ -65,5 +65,9 @@ public class PolicyDownloadPage extends ScreenManager {
 	@CacheLookup
 	public WebElement policyNum;
 
+	@FindBy(xpath="//div[@aria-label='Countdown timer']")
+	@CacheLookup
+	public WebElement pleaseWait;
+
 }
 

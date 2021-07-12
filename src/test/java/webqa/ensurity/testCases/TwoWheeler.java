@@ -904,13 +904,19 @@ public class TwoWheeler extends BaseTest {
         if (polExpType.contains("90")){
         selectFromDropDown("Bharti");
         enterPrevPolicyNum("AR00" + randomeNum8());
-        selcectPrevPolExpDateBreakin("2021");
+        if(polExpType.contains(" more than")){
+            enterDate("25032021");
+        }else {
+        selcectPrevPolExpDateBreakin("2021");}
         clickOnNext();}
         clickOnReviewNSubmit();
-        waitFor(1);
+        if (policyType.equalsIgnoreCase("1yrCp")) {
+            isBreakingPaymentPageDisplayed();
+            isTotalPremiumEqualTo(premiumAnnualy);
+            isIDVEqualTo(idv);
+        }else {
         isPaymentPageDisplayed();
         isTotalPremiumEqualTo(premiumAnnualy);
-        isIDVEqualTo(idv);
         clickOnMakePayment();
         String parentWindow = driver.getWindowHandle();
         switchToChildWindow();
@@ -937,6 +943,7 @@ public class TwoWheeler extends BaseTest {
             String pdfurl=e.getAttribute("href");
             waitFor(1);
             readPdfContent(pdfurl);}
+        }
     }
 
     @Test(priority = 1, groups = {"regression"}, dataProvider = "NewVehiclePolType")
@@ -1593,6 +1600,7 @@ public class TwoWheeler extends BaseTest {
         entervehicleNumer("MH-01-AD-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
+        selectYesNo("Yes");
         clickOnNextButton();
         selectFromDropDown("Bharti");
         enterPrevPolicyNum("AR00" + randomeNum8());
@@ -1760,6 +1768,7 @@ public class TwoWheeler extends BaseTest {
         entervehicleNumer("MH-01-AD-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
+        selectYesNo("Yes");
         clickOnNextButton();
         clickOnReviewNSubmit();
         waitFor(2);
@@ -2004,6 +2013,7 @@ public class TwoWheeler extends BaseTest {
         selectTwoWheeler();
         enterCustomerName("webQA"+time());
         clickOnNextBtn();
+//        enterMMVDetails("Ducati","Monster","1100 CC");
         selectMMV();
         rtoLocation();
         selectRegistrationDate("2018");
@@ -2059,41 +2069,47 @@ public class TwoWheeler extends BaseTest {
         clickOnNext();}
         clickOnReviewNSubmit();
         waitFor(2);
-        isPaymentPageDisplayed();
-        isTotalPremiumEqualTo(premiumAnnualy);
+
         if (!policyType.equalsIgnoreCase("1yrTP")){
-            isIDVEqualTo(idv);}
-        clickOnMakePayment();
-        clickOnOk();
-        waitFor(2);
-        String parentWindow = driver.getWindowHandle();
-        switchToChildWindow();
-        waitFor(2);
-        browserProceedForNotSecureLink();
-        waitFor(9);
-        driver.switchTo().frame(0);
-        isICICIPaymentPageDisplayed();
-        enterIciciPaymentDetailsAndProceed("5123456789012346","123","1222","Rahul singh");
-        isPaymentSuccessPageDisplayed();
-        refreshPage();
-        closeCurrentTab();
-        switchToTab(parentWindow);
-        refreshPage();
-        isPolicyDownloadPageDisplayed();
-        waitFor(3);
-        clickOnDownloadPolicy();
-        waitFor(9);
-        if (isPolicyDownloadMessageDispalyed()){
-            policyDownloadMessage();
+            isBreakingPaymentPageDisplayed();
+            isIDVEqualTo(idv);
+            isTotalPremiumEqualTo(premiumAnnualy);
         }else {
-            driver.get("chrome://downloads/");
+            isPaymentPageDisplayed();
+            isTotalPremiumEqualTo(premiumAnnualy);
+            clickOnMakePayment();
+            clickOnOk();
+            waitFor(2);
+            String parentWindow = driver.getWindowHandle();
+            switchToChildWindow();
+            waitFor(2);
+            browserProceedForNotSecureLink();
+            waitFor(9);
+            driver.switchTo().frame(0);
+            isICICIPaymentPageDisplayed();
+            enterIciciPaymentDetailsAndProceed("5123456789012346", "123", "1222", "Rahul singh");
+            isPaymentSuccessPageDisplayed();
+            refreshPage();
+            closeCurrentTab();
+            switchToTab(parentWindow);
+            refreshPage();
+            isPolicyDownloadPageDisplayed();
             waitFor(3);
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            WebElement e= (WebElement) js.executeScript(" return document.querySelector('body > downloads-manager').shadowRoot.querySelector('#frb0').shadowRoot.querySelector('#url')");
-            logger.info(e.getAttribute("href"));
-            String pdfurl=e.getAttribute("href");
-            waitFor(1);
-            readPdfContent(pdfurl);}
+            clickOnDownloadPolicy();
+            waitFor(9);
+            if (isPolicyDownloadMessageDispalyed()) {
+                policyDownloadMessage();
+            } else {
+                driver.get("chrome://downloads/");
+                waitFor(3);
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                WebElement e = (WebElement) js.executeScript(" return document.querySelector('body > downloads-manager').shadowRoot.querySelector('#frb0').shadowRoot.querySelector('#url')");
+                logger.info(e.getAttribute("href"));
+                String pdfurl = e.getAttribute("href");
+                waitFor(1);
+                readPdfContent(pdfurl);
+            }
+        }
 
     }
 
