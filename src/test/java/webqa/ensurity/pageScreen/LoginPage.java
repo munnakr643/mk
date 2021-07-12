@@ -29,7 +29,7 @@ public class LoginPage extends ScreenManager {
 	@CacheLookup
 	public WebElement txtPassword;
 
-	@FindBy(xpath="//*[@id='root']/div/div[2]/div/form/div/div[4]/button")
+	@FindBy(xpath="//span[text()='Proceed']")
 	@CacheLookup
 	public WebElement proceed;
 

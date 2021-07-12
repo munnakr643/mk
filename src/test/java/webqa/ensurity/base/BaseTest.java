@@ -251,7 +251,7 @@ public class BaseTest {
 	
 
 	public void enterOtp()  {
-		waitElement(loginPage.proceed, 7);
+		waitElement(driver.findElement(By.xpath("//span[text()='Proceed']")), 7);
 		assertThat(loginPage.otpbox1.isDisplayed(), equalTo(true));
 		String otp=readconfig.getPassword();
 		for(int i=1;i<=otp.length();i++){
