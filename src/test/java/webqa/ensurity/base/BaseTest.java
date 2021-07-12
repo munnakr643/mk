@@ -80,7 +80,7 @@ public class BaseTest {
 			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--incognito");
-//			options.addArguments("--headless");
+			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
 		} else if (br.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", readconfig.getFirefoxPath());
