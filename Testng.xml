@@ -19,10 +19,9 @@
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerICICI_L" />-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerReliance" >-->
 
-
-			<!--					<methods>-->
-<!--						<include name="verify4wRolloverPolicyPurchageWithDigit"></include>-->
-<!--					</methods>-->
+				<methods>
+					<include name="verify2wRolloverPolicyPurchageWithFuture"></include>
+				</methods>
 			</class>
 		</classes>
 
