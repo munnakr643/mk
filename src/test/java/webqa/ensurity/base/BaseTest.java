@@ -250,9 +250,9 @@ public class BaseTest {
 	}
 	
 
-	public void enterOtp() {
-//		waitElement(loginPage.proceed, 7);
-//		assertThat(loginPage.otpbox1.isDisplayed(), equalTo(true));
+	public void enterOtp()  {
+		waitElement(loginPage.proceed, 7);
+		assertThat(loginPage.otpbox1.isDisplayed(), equalTo(true));
 		String otp=readconfig.getPassword();
 		for(int i=1;i<=otp.length();i++){
 			String num= String.valueOf(otp.charAt(i-1));
@@ -262,12 +262,6 @@ public class BaseTest {
 		}
 		logger.info("otp " +otp+ " Enter successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "otp " +otp+ " Enter successfully");
-//		loginPage.otpbox1.sendKeys("1");
-//		loginPage.otpbox2.sendKeys("2");
-//		loginPage.otpbox3.sendKeys("3");
-//		loginPage.otpbox4.sendKeys("4");
-//		loginPage.otpbox5.sendKeys("5");
-//		loginPage.otpbox6.sendKeys("6");
 		waitFor(1);
 	}
 
