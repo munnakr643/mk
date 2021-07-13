@@ -36,11 +36,9 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
@@ -1942,6 +1940,7 @@ public class BaseTest {
 	}
 
 	public String time(){
+		TimeZone.setDefault(TimeZone.getTimeZone("Asia/Kolkata"));
 		LocalDateTime myDateObj = LocalDateTime.now();
 		DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddHH_mm");
 		String formattedDate = myDateObj.format(myFormatObj);

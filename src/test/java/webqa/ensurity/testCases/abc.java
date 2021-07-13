@@ -6,8 +6,12 @@ import webqa.ensurity.base.BaseTest;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class abc {
 
@@ -18,7 +22,9 @@ public class abc {
 //        str();
 //  abc fttt=new abc();
 //        fttt.time();
-        time();
+//        time();
+        time2();
+        time3();
 //        dds();
     }
 
@@ -73,6 +79,22 @@ public class abc {
         }
 
 
+    public static void time2(){
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Kolkata"));
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -100);
+        cal.add(Calendar.YEAR, 0);
+//        cal.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+//        cal.setTimeZone(TimeZone.getTimeZone("America/Montreal"));
+        cal.getInstance(TimeZone.getTimeZone("GMT"));
+
+        Date date = cal.getTime();
+        SimpleDateFormat format1 = new SimpleDateFormat("HH-mm-ss");
+        String date1 = format1.format(date);
+        System.out.println(date1);
+    }
+
+
     public static void dds(){
         String srrt="123456";
         for(int i=0;i<srrt.length();i++){
@@ -80,18 +102,14 @@ public class abc {
         }
     }
 
-    public static int solution(String S) {
-        int[] arr = new int[26];
-        for(int i=0;i<S.length();i++)
-        {
-            arr[(int)S.charAt(i)-65]++;
-        }
-        int a=arr[0];
-        int b=arr[1];
-        int l=arr[11]/2;
-        int n=arr[13];
-        int o=arr[14]/2;
-        return Math.min(Math.min(Math.min(a, b),Math.min(l, n)),o);
+
+    public static void time3(){
+        LocalDateTime myDateObj = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("HH_mm-ss");
+        myDateObj.atZone( ZoneId.of( "Africa/Tunis" ) );
+        String formattedDate = myDateObj.format(myFormatObj);
+        System.out.println(formattedDate);
+//        return formattedDate;
     }
 
 }

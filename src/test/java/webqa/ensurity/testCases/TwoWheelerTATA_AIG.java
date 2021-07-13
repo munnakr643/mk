@@ -76,7 +76,7 @@ public class TwoWheelerTATA_AIG extends BaseTest {
         clickOnProceedBtnAfterOtp();
         isHomePageScreenDisplay();
         selectTwoWheeler();
-        //enterCustomerName("webQA");
+        enterCustomerName("webQA"+time());
         clickOnNextBtn();
         selectMMV();
         rtoLocation();
