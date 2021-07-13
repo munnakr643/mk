@@ -985,7 +985,7 @@ public class BaseTest {
 	}
 
 	public void isPlanPageDisplayed(){
-		waitElement(quotePage.viewDetails, 90);
+		waitElement(quotePage.viewDetails, 120);
 		waitElement(quotePage.motorProfile, 3);
 		assertThat(quotePage.motorProfile.isDisplayed(), equalTo(true));
 		assertThat(quotePage.polTypePlanPage.isDisplayed(), equalTo(true));
