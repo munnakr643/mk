@@ -678,10 +678,10 @@ public class BaseTest {
 		waitElement(quotePage.generateQuote, 13);
 		assertThat(quotePage.generateQuote.isDisplayed(), equalTo(true));
 		quotePage.generateQuote.click();
-//		try {
-//			waitFor(7);
-//			quotePage.generateQuote.click();
-//		}catch (Exception e){}
+		try {
+			waitFor(7);
+			quotePage.generateQuote.click();
+		}catch (Exception e){}
 		logger.info("clicked on generate quote successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "clicked on generate quote successfully");
 	}
