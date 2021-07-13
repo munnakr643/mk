@@ -2,3 +2,4 @@ log/
 webQA/log/
 webQA/Reports
 *.DS_Store
+*.class
