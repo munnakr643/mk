@@ -3,5 +3,5 @@ webQA/log/
 test-output/
 *.DS_Store
 Reports/
-target/
+target/test-classes/
 test-output/
