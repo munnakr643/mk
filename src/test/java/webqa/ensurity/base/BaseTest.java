@@ -680,7 +680,8 @@ public class BaseTest {
 		quotePage.generateQuote.click();
 		try {
 			waitFor(9);
-			quotePage.generateQuote.click();
+			Actions action = new Actions(driver);
+			action.moveToElement(quotePage.generateQuote).doubleClick().perform();
 			logger.info("clicked on generate quote successfully");
 		}catch (Exception e){}
 		logger.info("clicked on generate quote successfully");
