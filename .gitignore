@@ -1,5 +1,7 @@
 log/
 webQA/log/
-webQA/Reports
+Reports/
+target/
+test-output/
 *.DS_Store
 *.class
