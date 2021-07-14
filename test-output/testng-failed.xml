@@ -7,14 +7,14 @@
   <test thread-count="5" name="Web-Automation(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="webqa.ensurity.testCases.FourWheeler">
+      <class name="webqa.ensurity.testCases.TwoWheelerTATA_AIG">
         <methods>
           <include name="setup"/>
           <include name="extentReportsFailOperation"/>
           <include name="tearDown"/>
-          <include name="verify4wRolloverPolicyPurchageWithDigitBeforeJuly2018"/>
+          <include name="verify2wRolloverPolicyPurchageWithTataAig" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- webqa.ensurity.testCases.FourWheeler -->
+      </class> <!-- webqa.ensurity.testCases.TwoWheelerTATA_AIG -->
     </classes>
   </test> <!-- Web-Automation(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

@@ -679,7 +679,7 @@ public class BaseTest {
 		assertThat(quotePage.generateQuote.isDisplayed(), equalTo(true));
 		quotePage.generateQuote.click();
 		try {
-			waitFor(9);
+			waitFor(6);
 			Actions action = new Actions(driver);
 			action.moveToElement(quotePage.generateQuote).doubleClick().perform();
 			logger.info("clicked on generate quote successfully");
