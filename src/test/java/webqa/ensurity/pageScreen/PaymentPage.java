@@ -249,7 +249,7 @@ public class PaymentPage extends ScreenManager {
 	@CacheLookup
 	public WebElement cardNumDigit;
 
-	@FindBy(id = "name_on_card")
+	@FindBy(id = "//input[@id='name_on_card']")
 	@CacheLookup
 	public WebElement nameOnCardDigit;
 
@@ -309,15 +309,15 @@ public class PaymentPage extends ScreenManager {
 	@CacheLookup
 	public WebElement otpFuture;
 
-	@FindBy(id = "card_exp_month")
+	@FindBy(id = "//input[@id='card_exp_month']")
 	@CacheLookup
 	public WebElement expMonthDigit;
 
-	@FindBy(id = "card_exp_year")
+	@FindBy(id = "//input[@id='card_exp_year']")
 	@CacheLookup
 	public WebElement expYearDigit;
 
-	@FindBy(id = "security_code")
+	@FindBy(xpath = "//input[@id='security_code']")
 	@CacheLookup
 	public WebElement cvvDigit;
 
