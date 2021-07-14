@@ -679,8 +679,9 @@ public class BaseTest {
 		assertThat(quotePage.generateQuote.isDisplayed(), equalTo(true));
 		quotePage.generateQuote.click();
 		try {
-			waitFor(7);
+			waitFor(9);
 			quotePage.generateQuote.click();
+			logger.info("clicked on generate quote successfully");
 		}catch (Exception e){}
 		logger.info("clicked on generate quote successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "clicked on generate quote successfully");
