@@ -885,7 +885,7 @@ public class BaseTest {
 			assertThat(quotePage.polTypeOD.isDisplayed(), equalTo(true));
 			assertThat(quotePage.insPolTypeOD.isDisplayed(), equalTo(true));
 		}else if (polType.equalsIgnoreCase("1yrTP")){
-			waitElement(quotePage.polTypeTp, 60);
+			waitElement(quotePage.polTypeTp, 120);
 			assertThat(quotePage.polTypeTp.isDisplayed(), equalTo(true));
 			assertThat(quotePage.insPolTypeTp.isDisplayed(), equalTo(true));
 		}else {
