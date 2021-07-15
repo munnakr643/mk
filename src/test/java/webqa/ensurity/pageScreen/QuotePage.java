@@ -1,5 +1,7 @@
 package webqa.ensurity.pageScreen;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -7,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import webqa.ensurity.pageScreen.manager.ScreenManager;
 
 
+@Getter
+@Setter
 public class QuotePage extends ScreenManager {
 
 	public QuotePage(WebDriver driver)
