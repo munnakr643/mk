@@ -11,17 +11,17 @@
 	<test name="Web-Automation">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="webqa.ensurity.testCases.TwoWheelerTATA_AIG" >
-<!--			<class name="webqa.ensurity.testCases.TwoWheelerDIGIT">-->
+<!--			<class name="webqa.ensurity.testCases.TwoWheelerTATA_AIG" >-->
+			<class name="webqa.ensurity.testCases.TwoWheelerDIGIT">
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerFUTURE_G"/>-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerHDFC_ERGO"/>-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerTATA_AIG" />-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerICICI_L" />-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerReliance" >-->
 
-				<methods>
-					<include name="verify2wRolloverPolicyPurchageWithTataAig"></include>
-				</methods>
+<!--				<methods>-->
+<!--					<include name="verify2wRolloverPolicyPurchageWithTataAig"></include>-->
+<!--				</methods>-->
 			</class>
 		</classes>
 
