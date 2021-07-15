@@ -678,6 +678,10 @@ public class BaseTest {
 		waitElement(quotePage.generateQuote, 13);
 		assertThat(quotePage.generateQuote.isDisplayed(), equalTo(true));
 		quotePage.generateQuote.click();
+		waitFor(1);
+		String base64Screenshot = ScreenUtil.getBase64Screenshot(driver);
+		ExtentTestManager.getTest().log(LogStatus.PASS,
+				ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
 		try {
 			waitFor(6);
 			Actions action = new Actions(driver);
