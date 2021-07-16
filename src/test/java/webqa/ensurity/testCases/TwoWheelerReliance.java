@@ -126,7 +126,7 @@ public class TwoWheelerReliance extends BaseTest {
         enterNomineeName("Rishi Singh");
         selectDobAction("1996");
         selectFromDropDown("Brother");
-        enterPermAddress("Church Road");
+        enterNomineeAddress("Church Road");
         clickOnNext();
         waitFor(1);
         entervehicleNumer("MH-01-DE-" + randomeNum());
@@ -227,7 +227,7 @@ public class TwoWheelerReliance extends BaseTest {
         enterNomineeName("Rishi Singh");
         selectDobAction("1996");
         selectFromDropDown("Brother");
-        enterPermAddress("Church Road");
+        enterNomineeAddress("Church Road");
         clickOnNext();
         waitFor(1);
         entervehicleNumer("MH-01-DE-" + randomeNum());
@@ -325,7 +325,7 @@ public class TwoWheelerReliance extends BaseTest {
         enterNomineeName("Rishi Singh");
         selectDobAction("1996");
         selectFromDropDown("Brother");
-        enterPermAddress("Church Road");
+        enterNomineeAddress("Church Road");
         clickOnNext();
         waitFor(1);
         entervehicleNumer("MH-01-DE-" + randomeNum());
@@ -424,7 +424,7 @@ public class TwoWheelerReliance extends BaseTest {
         enterNomineeName("Rishi Singh");
         selectDobAction("1996");
         selectFromDropDown("Brother");
-        enterPermAddress("Church Road");
+        enterNomineeAddress("Church Road");
         clickOnNext();
         waitFor(1);
         entervehicleNumer("MH-01-DE-" + randomeNum());

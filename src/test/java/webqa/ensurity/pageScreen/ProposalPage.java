@@ -302,5 +302,9 @@ public class ProposalPage extends ScreenManager {
 	@FindBy(xpath="//input[@placeholder='dd/mm/yyyy']")
 	@CacheLookup
 	public WebElement date;
+
+	@FindBy(id="nomineeAddress")
+	@CacheLookup
+	public WebElement nomineeAddress;
 }
 

@@ -1302,9 +1302,17 @@ public class BaseTest {
 	}
 
 	public void enterPermAddress(String address){
-		waitElement(proposalPage.address, 3);
-		assertThat(proposalPage.address.isDisplayed(), equalTo(true));
-		proposalPage.address.sendKeys(address);
+		waitElement(proposalPage.getAddress(), 3);
+		assertThat(proposalPage.getAddress().isDisplayed(), equalTo(true));
+		proposalPage.getAddress().sendKeys(address);
+		logger.info("enter address successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "enter address successfully");
+	}
+
+	public void enterNomineeAddress(String address){
+		waitElement(proposalPage.getNomineeAddress(), 3);
+		assertThat(proposalPage.getNomineeAddress().isDisplayed(), equalTo(true));
+		proposalPage.getNomineeAddress().sendKeys(address);
 		logger.info("enter address successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "enter address successfully");
 	}
