@@ -1302,9 +1302,9 @@ public class BaseTest {
 	}
 
 	public void enterPermAddress(String address){
-		waitElement(proposalPage.getAddress(), 3);
-		assertThat(proposalPage.getAddress().isDisplayed(), equalTo(true));
-		proposalPage.getAddress().sendKeys(address);
+		waitElement(proposalPage.address, 3);
+		assertThat(proposalPage.address.isDisplayed(), equalTo(true));
+		proposalPage.address.sendKeys(address);
 		logger.info("enter address successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "enter address successfully");
 	}
