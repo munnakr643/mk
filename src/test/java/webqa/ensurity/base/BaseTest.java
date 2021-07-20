@@ -249,7 +249,7 @@ public class BaseTest {
 	
 
 	public void enterOtp()  {
-		waitElement(loginPage.getOtpbox1(), 7);
+		waitElement(loginPage.getOtpbox1(), 20);
 		assertThat(loginPage.getOtpbox1().isDisplayed(), equalTo(true));
 		String otp=readconfig.getPassword();
 		for(int i=1;i<=otp.length();i++){
@@ -790,7 +790,7 @@ public class BaseTest {
 				.ignoring(StaleElementReferenceException.class).until(new Function() {
 			@Override
 			public Object apply(Object arg0) {
-				WebElement e = driver.findElement(By.xpath("//span[text()='16']"));
+				WebElement e = driver.findElement(By.xpath("//span[text()='17']"));
 				Actions action = new Actions(driver);
 				action.moveToElement(e).click().perform();
 				return true;
