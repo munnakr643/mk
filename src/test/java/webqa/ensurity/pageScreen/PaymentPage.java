@@ -248,13 +248,11 @@ public class PaymentPage extends ScreenManager {
 	@CacheLookup
 	public WebElement card_numberIl;
 
-//	@FindBy(xpath = "//input[@id='card_number']")
-	@FindBy(xpath = "//input[@placeholder='Enter your card number']")
+	@FindBy(xpath = "//input[@id='card_number']")
 	@CacheLookup
 	public WebElement cardNumDigit;
 
-	//@FindBy(xpath = "//input[@id='name_on_card']")
-	@FindBy(xpath = "//input[@placeholder='Name on the card']")
+	@FindBy(xpath = "//input[@id='name_on_card']")
 	@CacheLookup
 	public WebElement nameOnCardDigit;
 
