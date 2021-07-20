@@ -88,7 +88,7 @@ public class TwoWheelerFUTURE_G extends BaseTest {
         selectTwoWheeler();
         enterCustomerName("webQA"+time());
         clickOnNextBtn();
-        enterMMVDetails("Bajaj","Discover","DTS-SI Electric");
+        enterMMVDetails("Bajaj","Discover","DTS-Si ELECTRIC");
         enterRtoCode("BR01");
         selectRegistrationDate("2019");
         clickOnNext();
@@ -185,7 +185,7 @@ public class TwoWheelerFUTURE_G extends BaseTest {
         selectTwoWheeler();
         enterCustomerName("webQA"+time());
         clickOnNextBtn();
-        enterMMVDetails("Bajaj","Discover","DTS-SI Electric");
+        enterMMVDetails("Bajaj","Discover","DTS-Si ELECTRIC");
         enterRtoCode("BR01");
         selectRegistrationDate("2018");
         clickOnNext();
@@ -285,7 +285,7 @@ public class TwoWheelerFUTURE_G extends BaseTest {
         selectTwoWheeler();
         enterCustomerName("webQA"+time());
         clickOnNextBtn();
-        enterMMVDetails("Bajaj","Discover","DTS-SI Electric");
+        enterMMVDetails("Bajaj","Discover","DTS-Si ELECTRIC");
         enterRtoCode("BR01");
         selectNewVehicle();
         clickOnNext();
