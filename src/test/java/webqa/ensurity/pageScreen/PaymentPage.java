@@ -248,11 +248,13 @@ public class PaymentPage extends ScreenManager {
 	@CacheLookup
 	public WebElement card_numberIl;
 
-	@FindBy(xpath = "//input[@id='card_number']")
+//	@FindBy(xpath = "//input[@id='card_number']")
+	@FindBy(xpath = "//input[@placeholder='Enter your card number']")
 	@CacheLookup
 	public WebElement cardNumDigit;
 
-	@FindBy(xpath = "//input[@id='name_on_card']")
+	//@FindBy(xpath = "//input[@id='name_on_card']")
+	@FindBy(xpath = "//input[@placeholder='Name on the card']")
 	@CacheLookup
 	public WebElement nameOnCardDigit;
 
@@ -312,15 +314,18 @@ public class PaymentPage extends ScreenManager {
 	@CacheLookup
 	public WebElement otpFuture;
 
-	@FindBy(xpath = "//input[@id='card_exp_month']")
+//	@FindBy(xpath = "//input[@id='card_exp_month']")
+	@FindBy(xpath = "//input[@placeholder='MM']")
 	@CacheLookup
 	public WebElement expMonthDigit;
 
-	@FindBy(xpath = "//input[@id='card_exp_year']")
+	//@FindBy(xpath = "//input[@id='card_exp_year']")
+	@FindBy(xpath = "//input[@placeholder='YY']")
 	@CacheLookup
 	public WebElement expYearDigit;
 
-	@FindBy(xpath = "//input[@id='security_code']")
+//	@FindBy(xpath = "//input[@id='security_code']")
+	@FindBy(xpath = "//input[@placeholder='CVV']")
 	@CacheLookup
 	public WebElement cvvDigit;
 
