@@ -200,6 +200,7 @@ public class TwoWheelerFUTURE_G extends BaseTest {
         }
         isPlanPageDisplayed();
         isSelectedPolTypeDisplayed(policyType);
+        waitFor(3);
         scrollUpDown(0, 100);
         clickOnViewDetailsfutureGeneral();
         getSubtotal();
@@ -283,7 +284,7 @@ public class TwoWheelerFUTURE_G extends BaseTest {
         clickOnProceedBtnAfterOtp();
         isHomePageScreenDisplay();
         selectTwoWheeler();
-        enterCustomerName("webQA"+time());
+        enterCustomerName("future"+time());
         clickOnNextBtn();
         enterMMVDetails("Bajaj","Discover","DTS-Si ELECTRIC");
         enterRtoCode("BR01");
