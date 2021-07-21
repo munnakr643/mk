@@ -2172,15 +2172,13 @@ public class BaseTest {
 		waitElement(paymentPage.getCardNumDigit(), 10);
 		assertThat(paymentPage.getCardNumDigit().isDisplayed(), equalTo(true));
 		paymentPage.getCardNumDigit().sendKeys(cardNum);
-		waitFor(1);
 		driver.switchTo().defaultContent();
 		waitFor(1);
 		driver.switchTo().frame(driver.findElement(By.className("name_on_card_iframe")));
-		waitFor(2);
+		waitFor(1);
 		waitElement(paymentPage.getNameOnCardDigit(), 7);
 		assertThat(paymentPage.getNameOnCardDigit().isDisplayed(), equalTo(true));
 		paymentPage.getNameOnCardDigit().sendKeys(nameOnCard);
-		waitFor(1);
 		driver.switchTo().defaultContent();
 		waitFor(1);
 		driver.switchTo().frame(driver.findElement(By.className("card_exp_month_iframe")));

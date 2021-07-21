@@ -18,9 +18,9 @@
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerHDFC_ERGO">-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerTATA_AIG" />-->
 			<!--<class name="webqa.ensurity.testCases.TwoWheelerReliance" >-->
-				<methods>
-					<include name="verify2wRolloverPolicyPurchageWithDigitBeforeJuly2018withDiffrentNcb"></include>
-				</methods>
+<!--				<methods>-->
+<!--					<include name="verify2wRolloverPolicyPurchageWithDigitBeforeJuly2018withDiffrentNcb"></include>-->
+<!--				</methods>-->
 			</class>
 		</classes>
 
