@@ -16,7 +16,7 @@
 <!--			<class name="webqa.ensurity.testCases.FourWheelerHDFC_ERGO">-->
 <!--			<class name="webqa.ensurity.testCases.FourWheelerICICI_L">-->
 <!--			<class name="webqa.ensurity.testCases.FourWheelerDIGIT">-->
-			<class name="webqa.ensurity.testCases.FourWheelerTATA_AIG" />
+			<class name="webqa.ensurity.testCases.FourWheelerTATA_AIG" >
 <!--			<class name="webqa.ensurity.testCases.FourWheelerReliance" >-->
 <!--				<methods>-->
 <!--					<include name="verify2wRolloverPolicyPurchageWithDigitBeforeJuly2018withDiffrentNcb"></include>-->
