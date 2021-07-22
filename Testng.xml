@@ -11,8 +11,8 @@
 	<test name="Web-Automation">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="webqa.ensurity.testCases.FourWheelerBAJAJ" >
-<!--			<class name="webqa.ensurity.testCases.TwoWheelerICICI_L">-->
+<!--			<class name="webqa.ensurity.testCases.FourWheelerBAJAJ" >-->
+			<class name="webqa.ensurity.testCases.FourWheelerFuture_G">
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerDIGIT">-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerDIGIT">-->
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerFUTURE_G">-->
