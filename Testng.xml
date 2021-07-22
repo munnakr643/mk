@@ -14,9 +14,9 @@
 <!--			<class name="webqa.ensurity.testCases.FourWheelerBAJAJ" >-->
 <!--			<class name="webqa.ensurity.testCases.FourWheelerFuture_G">-->
 <!--			<class name="webqa.ensurity.testCases.FourWheelerHDFC_ERGO">-->
-			<class name="webqa.ensurity.testCases.FourWheelerICICI_L">
-<!--			<class name="webqa.ensurity.testCases.TwoWheelerFUTURE_G">-->
-<!--			<class name="webqa.ensurity.testCases.TwoWheelerTATA_AIG" />-->
+<!--			<class name="webqa.ensurity.testCases.FourWheelerICICI_L">-->
+<!--			<class name="webqa.ensurity.testCases.FourWheelerDIGIT">-->
+			<class name="webqa.ensurity.testCases.FourWheelerTATA_AIG" />
 <!--			<class name="webqa.ensurity.testCases.TwoWheelerReliance" >-->
 <!--				<methods>-->
 <!--					<include name="verify2wRolloverPolicyPurchageWithDigitBeforeJuly2018withDiffrentNcb"></include>-->
