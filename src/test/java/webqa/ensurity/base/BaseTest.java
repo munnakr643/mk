@@ -933,6 +933,7 @@ public class BaseTest {
 		assertThat(quotePage.get_5TP().isDisplayed(), equalTo(true));
 		if(changeTo.equalsIgnoreCase("5TP")){
 			quotePage.get_5TP().click();
+			waitFor(1.5);
 			waitElement(quotePage.getApply(),3);
 			quotePage.getApply().click();
 		}else {
