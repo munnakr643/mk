@@ -30,7 +30,9 @@
                 <configuration>
                     <suiteXmlFiles>
                         <!-- TestNG suite XML files -->
-                        <suiteXmlFile>Testng.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>Testng.xml</suiteXmlFile>-->
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
