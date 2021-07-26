@@ -65,7 +65,7 @@ public class BaseTest {
 
 	public static Logger logger = LogManager.getLogger(BaseTest.class);
 
-	@Parameters("browser")
+	@Parameters("chrome")
 	@BeforeMethod(alwaysRun = true)
 	public void setup(String br) {
 
