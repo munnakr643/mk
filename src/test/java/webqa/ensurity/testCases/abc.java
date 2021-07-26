@@ -7,6 +7,7 @@ import webqa.ensurity.base.BaseTest;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -23,9 +24,11 @@ public class abc {
 //  abc fttt=new abc();
 //        fttt.time();
 //        time();
-        time2();
+        time();
         time3();
 //        dds();
+        System.out.println(getMonthNumber("January"));
+        month();
     }
 
     public static void mi(int i,String text,int intance){
@@ -71,11 +74,21 @@ public class abc {
         public static void time(){
             Calendar cal = Calendar.getInstance();
             cal.add(Calendar.DATE, -100);
+            cal.add(Calendar.MONTH, 0);
             cal.add(Calendar.YEAR, 0);
             Date date = cal.getTime();
             SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat yr = new SimpleDateFormat("yyyy");
+            SimpleDateFormat month = new SimpleDateFormat("MM");
+            SimpleDateFormat day = new SimpleDateFormat("dd");
+            String yrs = yr.format(date);
+            String mon = month.format(date);
+            String dd = day.format(date);
             String date1 = format1.format(date);
             System.out.println(date1);
+            System.out.println(yrs);
+            System.out.println(mon);
+            System.out.println(dd);
         }
 
 
@@ -112,4 +125,22 @@ public class abc {
 //        return formattedDate;
     }
 
+    private static int getMonthNumber(String monthName) {
+        return Month.valueOf(monthName.toUpperCase()).getValue();
+    }
+
+    public static void month(){
+        int selectMonth=6;
+
+        int currentMonth=getMonthNumber("July");
+            if(selectMonth<currentMonth){
+                for (int i=1;i<=currentMonth-selectMonth;i++){
+                    System.out.println("ifclick"+i);
+                }
+            }else {
+                for (int i=1;i<=selectMonth-currentMonth;i++){
+                    System.out.println("elseclick"+i);
+                }
+            }
+    }
 }
