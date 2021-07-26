@@ -11,7 +11,6 @@
 	<test name="Web-Automation">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="webqa.ensurity.testCases.TwoWheelerDIGIT"/>
 			<class name="webqa.ensurity.testCases.FourWheelerFuture_G"/>
 			<class name="webqa.ensurity.testCases.FourWheelerHDFC_ERGO"/>
 			<class name="webqa.ensurity.testCases.FourWheelerICICI_L"/>

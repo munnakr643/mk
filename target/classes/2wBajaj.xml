@@ -11,7 +11,7 @@
     <test name="Web-Automation">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="webqa.ensurity.testCases.TwoWheelerDIGIT">
+            <class name="webqa.ensurity.testCases.TwoWheelerBAJAJ">
 
                 <!--				<methods>-->
                 <!--					<include name="verify2wRolloverPolicyPurchageWithDigitBeforeJuly2018withDiffrentNcb"></include>-->
