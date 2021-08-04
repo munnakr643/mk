@@ -503,7 +503,7 @@ public class TwoWheelerHDFC_ERGO extends BaseTest {
         entervehicleNumer("MH-01-DA-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
-        selcectManufactureDate("2021");
+        selectManufactureDate(0,0,0);
         clickOnNext();
         clickOnReviewNSubmit();
         waitFor(1);

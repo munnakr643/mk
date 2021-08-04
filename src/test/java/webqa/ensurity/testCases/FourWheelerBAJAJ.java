@@ -75,7 +75,7 @@ public class FourWheelerBAJAJ extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -85,6 +85,7 @@ public class FourWheelerBAJAJ extends BaseTest {
         clickOngenerateQuote();
         isPlanPageDisplayed();
         isSelectedPolTypeDisplayed(policyType);
+        scrollToInsurer("allianz");
 //        scrollUpDown(0, 200);
         clickOnViewDetailsBajaj();
         String idv=getIdvAmount();
@@ -108,18 +109,16 @@ public class FourWheelerBAJAJ extends BaseTest {
         enterNomineeAge("34");
         selectFromDropDown("SIBLING");
         clickOnNext();
-        entervehicleNumer("MH-01-DT-" + randomeNum());
+        entervehicleNumer("MH-01-BS-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
         clickOnNext();
         enterPrevPolicyNum("AR00" + randomeNum8());
-        if (policyType.equalsIgnoreCase("3yrTP")){
-            selectExpiryDate("2021");
-        }
-        else if (policyType.equalsIgnoreCase("1yrTP")){
-            selectExpiryDate("2021");
-        }
-        else {
+////
+//            if (policyType.equalsIgnoreCase("1yrTP")){
+//            selectExpiryDate("2021");
+//        }
+//        else {
             selectExpiryDate("2020");
             selectExpiryDate2Bajaj("2018");
             selectFromDropDown("Shriram");
@@ -128,7 +127,7 @@ public class FourWheelerBAJAJ extends BaseTest {
             enterPrevPolicyClaim("0");
             scrollUpDown(0,100);
             enterPrevTpTenure("3");
-        }
+//        }
         clickOnNext();
         clickOnReviewNSubmit();
         isPaymentPageDisplayed();
@@ -177,7 +176,7 @@ public class FourWheelerBAJAJ extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,5);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -216,7 +215,7 @@ public class FourWheelerBAJAJ extends BaseTest {
         enterNomineeAge("34");
         selectFromDropDown("SIBLING");
         clickOnNext();
-        entervehicleNumer("MH-01-DT-" + randomeNum());
+        entervehicleNumer("MH-01-BD-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
         clickOnNext();
@@ -272,7 +271,7 @@ public class FourWheelerBAJAJ extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -312,12 +311,12 @@ public class FourWheelerBAJAJ extends BaseTest {
         enterNomineeAge("34");
         selectFromDropDown("SIBLING");
         clickOnNext();
-        entervehicleNumer("MH-01-DT-" + randomeNum());
+        entervehicleNumer("MH-01-TA-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
         clickOnNext();
         enterPrevPolicyNum("AR00" + randomeNum8());
-        selectExpiryDate("2021");
+        selectExpiryDate(0,0,7);
         clickOnNext();
         clickOnReviewNSubmit();
         isPaymentPageDisplayed();

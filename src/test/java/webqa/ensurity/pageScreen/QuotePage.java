@@ -171,7 +171,7 @@ public class QuotePage extends ScreenManager {
 	@CacheLookup
 	public WebElement prevMonth;
 
-	@FindBy(xpath="//span[text()='16']")
+	@FindBy(xpath="//span[text()='17']")
 	@CacheLookup
 	public WebElement date16;
 
@@ -454,6 +454,10 @@ public class QuotePage extends ScreenManager {
 	@FindBy(xpath = "//div[text()='Addons']")
 	@CacheLookup
 	public WebElement addonsText;
+
+	@FindBy(xpath = "//h6[@data-mui-test='calendar-month-text']")
+	@CacheLookup
+	public WebElement calendarMonth;
 
 }
 

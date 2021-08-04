@@ -71,11 +71,11 @@ public class abc {
 
 
 
-        public static void time(){
+        public static String time(){
             Calendar cal = Calendar.getInstance();
-            cal.add(Calendar.DATE, -100);
-            cal.add(Calendar.MONTH, 0);
-            cal.add(Calendar.YEAR, 0);
+            cal.add(Calendar.DATE, -45);
+            cal.add(Calendar.MONTH, -0);
+            cal.add(Calendar.YEAR, -0);
             Date date = cal.getTime();
             SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
             SimpleDateFormat yr = new SimpleDateFormat("yyyy");
@@ -84,11 +84,15 @@ public class abc {
             String yrs = yr.format(date);
             String mon = month.format(date);
             String dd = day.format(date);
+            if (dd.charAt(0)=='0'){
+                dd = dd.substring(1);
+            }
             String date1 = format1.format(date);
             System.out.println(date1);
             System.out.println(yrs);
             System.out.println(mon);
             System.out.println(dd);
+            return mon;
         }
 
 
@@ -130,9 +134,10 @@ public class abc {
     }
 
     public static void month(){
-        int selectMonth=6;
+        System.out.println("-------------"+Integer.parseInt(time()));
+        int selectMonth=Integer.parseInt(time());
 
-        int currentMonth=getMonthNumber("July");
+        int currentMonth=getMonthNumber("August");
             if(selectMonth<currentMonth){
                 for (int i=1;i<=currentMonth-selectMonth;i++){
                     System.out.println("ifclick"+i);

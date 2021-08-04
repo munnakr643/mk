@@ -115,7 +115,7 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         entervehicleNumer("MH-01-AR-" + randomeNum());
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
-        selcectManufactureDate("2021");
+        selectManufactureDate(0,0,13);
         clickOnNext();
         clickOnReviewNSubmit();
         waitFor(1);
@@ -164,7 +164,7 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -174,7 +174,8 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         clickOngenerateQuote();
         isPlanPageDisplayed();
         isSelectedPolTypeDisplayed(policyType);
-        scrollUpDown(0, 800);
+        scrollToInsurer("hdfcergo");
+//        scrollUpDown(0, 800);
         clickOnViewDetailsHdfcErgo();
         getSubtotal();
         String idv=getIdvAmount();
@@ -205,13 +206,13 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         clickOnNext();
         selectFromDropDown("Bharti");
         enterPrevPolicyNum("AR00" + randomeNum8());
-        selectExpiryDate("2021");
+        selectExpiryDate(0,0,7);
         if (policyType.equalsIgnoreCase("saod")) {
-            selectExpiryDate2("2022");
+            selectExpiryDate2(0,0,7);
         } else if (policyType.equalsIgnoreCase("Bundle")) {
-            selectExpiryDate2("2022");
+            selectExpiryDate2(0,0,7);
         } else if (policyType.equalsIgnoreCase("5yrTP")) {
-            selectExpiryDate2("2022");
+            selectExpiryDate2(0,0,7);
         }
         clickOnNext();
         clickOnReviewNSubmit();
@@ -260,7 +261,7 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,5);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -274,7 +275,8 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         }
         isPlanPageDisplayed();
         isSelectedPolTypeDisplayed(policyType);
-        scrollUpDown(0, 800);
+        scrollToInsurer("hdfcergo");
+//        scrollUpDown(0, 800);
         clickOnViewDetailsHdfcErgo();
         getSubtotal();
         String idv="";
@@ -308,7 +310,7 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         if (polExpType.contains("90")){
             selectFromDropDown("Bharti");
             enterPrevPolicyNum("AR00" + randomeNum8());
-            selectExpiryDate("2021");
+            selectExpiryDate(0,0,-45);
             clickOnNext();}
         clickOnReviewNSubmit();
         waitFor(3);
@@ -360,7 +362,7 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(4,0,0);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -376,6 +378,7 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         clickOnApply();
         isInsurerDisplayedOnPlanpage();
         isPlanPageDisplayed();
+        scrollToInsurer("hdfcergo");
         clickOnViewDetailsHdfcErgo();
         getSubtotal();
         String idv=getIdvAmount();
@@ -406,7 +409,7 @@ public class FourWheelerHDFC_ERGO extends BaseTest {
         clickOnNext();
         selectFromDropDown("Bharti");
         enterPrevPolicyNum("AR00" + randomeNum8());
-        selectExpiryDate("2021");
+        selectExpiryDate(0,0,7);
         clickOnNext();
         clickOnReviewNSubmit();
         waitFor(3);

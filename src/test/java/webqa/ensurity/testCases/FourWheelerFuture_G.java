@@ -73,7 +73,7 @@ public class FourWheelerFuture_G extends BaseTest {
         clickOnNextBtn();
         enterMMVDetails("MARUTI SUZUKI","Swift","LXI (1298 CC");
         enterRtoCode("DL01");
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -109,8 +109,8 @@ public class FourWheelerFuture_G extends BaseTest {
         selectFromDropDown("Brother");
         clickOnNext();
         entervehicleNumer("DL01PB" + randomeNum());
-        enterChassisNumber("CH1234567" + randomeNum8());
-        enterEngineNumber("EN1234567" + randomeNum8());
+        enterChassisNumber("CH21"+randomeNum()+"0"+randomeNum8());
+        enterEngineNumber("EN31"+randomeNum8()+"0"+ randomeNum());
         clickOnNext();
         enterPrevPolicyNum("AR00" + randomeNum8());
         selectFromDropDown("HDFC");
@@ -170,7 +170,7 @@ public class FourWheelerFuture_G extends BaseTest {
         clickOnNextBtn();
         enterMMVDetails("HONDA","Accord","2.4 VTI L MT (2354 CC)");
         enterRtoCode("DL01");
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,4);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");

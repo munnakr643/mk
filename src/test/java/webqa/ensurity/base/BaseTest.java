@@ -36,6 +36,7 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -294,8 +295,8 @@ public class BaseTest {
 		waitElement(quotePage.getCarInsurance(), 3);
 		assertThat(quotePage.getCarInsurance().isDisplayed(), equalTo(true));
 		quotePage.getCarInsurance().click();
-		logger.info("select two wheeler successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "select two wheeler successfully");
+		logger.info("select Four wheeler successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "select Four wheeler successfully");
 	}
 
 	public void enterCustomerName(String custrName) {
@@ -400,8 +401,8 @@ public class BaseTest {
 		waitElement(quotePage.getHondaCity(), 3);
 		assertThat(quotePage.getHondaCity().isDisplayed(), equalTo(true));
 		quotePage.getHondaCity().click();
-		logger.info("select activa successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "select activa successfully");
+		logger.info("select City successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "select City successfully");
 		waitElement(quotePage.getPetrol(), 3);
 		assertThat(quotePage.getPetrol().isDisplayed(), equalTo(true));
 		quotePage.getPetrol().click();
@@ -411,7 +412,7 @@ public class BaseTest {
 		assertThat(quotePage.get_1point3EXI1343CC().isDisplayed(), equalTo(true));
 		quotePage.get_1point3EXI1343CC().click();
 		logger.info("select 3G109cc successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "select 3G109cc successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "select 1.3Exi successfully");
 	}
 
 	public void enterRtoCode(String rtoCode){
@@ -446,20 +447,61 @@ public class BaseTest {
 		ExtentTestManager.getTest().log(LogStatus.PASS, "select mumbaiSouth successfully");
 	}
 
-	public void selectRegistrationDate(String year) {
+	private static int getMonthNumber(String monthName) {
+		return Month.valueOf(monthName.toUpperCase()).getValue();
+	}
+
+	public void selectRegistrationDate(String year){
+
+	}
+
+	public void selectRegistrationDate(int Year,int Month,int Day) {
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, -Day);
+		cal.add(Calendar.MONTH, -Month);
+		cal.add(Calendar.YEAR, -Year);
+		Date date = cal.getTime();
+		SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat yr = new SimpleDateFormat("yyyy");
+		SimpleDateFormat month = new SimpleDateFormat("MM");
+		SimpleDateFormat day = new SimpleDateFormat("dd");
+		String yrs = yr.format(date);
+		String mon = month.format(date);
+		String dd = day.format(date);
+		if (dd.charAt(0)=='0'){
+			dd = dd.substring(1);
+		}
+		String date1 = format1.format(date);
+		logger.info("Registration date selected as "+date1+" successfully");
 		waitFor(1);
 		//clickOnChooseDate();
 		waitElement(quotePage.getChooseDate(), 3);
 		assertThat(quotePage.getChooseDate().isDisplayed(), equalTo(true));
 		quotePage.getChooseDate().click();
 		waitFor(1);
-		driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
+		driver.findElement(By.xpath("//button[text()='"+yrs+"']")).click();
+		waitFor(1);
+		waitElement(quotePage.getCalendarMonth(), 3);
+		assertThat(quotePage.getCalendarMonth().isDisplayed(), equalTo(true));
+		String ccMonth=quotePage.getCalendarMonth().getText();
+		int selectMonth=Integer.parseInt(mon);
+
+		int currentMonth=getMonthNumber(ccMonth);
+		if(selectMonth<currentMonth){
+			for (int i=1;i<=currentMonth-selectMonth;i++){
+				prevMonthAction();
+			}
+		}else {
+			for (int i=1;i<=selectMonth-currentMonth;i++){
+				nextMonthAction();
+			}
+		}
 		waitFor(1);
 		waitElement(quotePage.getDate16(), 3);
 		assertThat(quotePage.getDate16().isDisplayed(), equalTo(true));
-		quotePage.getDate16().click();
-		logger.info("Registration date selected successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "Registration date selected successfully");
+		chooseDateUsingAction(dd);
+		logger.info("Registration date selected as "+date1+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "Registration date selected as  "+date1+" successfully");
 	}
 
 	public void selectNewVehicle(){
@@ -525,6 +567,94 @@ public class BaseTest {
 		chooseDateUsingAction();
 		logger.info("Date selected successfully");
 		ExtentTestManager.getTest().log(LogStatus.PASS, "Date selected successfully");
+	}
+
+	public void selectExpiryDate2(int Year,int Month,int Day){
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, Day);
+		cal.add(Calendar.MONTH, Month);
+		cal.add(Calendar.YEAR, Year);
+		Date date = cal.getTime();
+		SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat yr = new SimpleDateFormat("yyyy");
+		SimpleDateFormat month = new SimpleDateFormat("MM");
+		SimpleDateFormat day = new SimpleDateFormat("dd");
+		String yrs = yr.format(date);
+		String mon = month.format(date);
+		String dd = day.format(date);
+		if (dd.charAt(0)=='0'){
+			dd = dd.substring(1);
+		}
+		String date1 = format1.format(date);
+		logger.info("Policy Expiry date selected as "+date1+" successfully");
+		waitFor(1);
+		clickOnChooseDate2(4);
+		waitFor(1);
+		driver.findElement(By.xpath("//button[text()='"+yrs+"']")).click();
+		waitFor(1);
+		String ccMonth=driver.findElement(By.xpath("//h6[@data-mui-test='calendar-month-text']")).getText();
+		//String ccMonth=quotePage.getCalendarMonth().getText();
+		int selectMonth=Integer.parseInt(mon);
+
+		int currentMonth=getMonthNumber(ccMonth);
+		if(selectMonth<currentMonth){
+			for (int i=1;i<=currentMonth-selectMonth;i++){
+				prevMonthAction();
+			}
+		}else {
+			for (int i=1;i<=selectMonth-currentMonth;i++){
+				nextMonthAction();
+			}
+		}
+		waitFor(1);
+		chooseDateUsingAction(dd);
+		logger.info("Policy Expiry date selected as "+date1+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "Policy Expiry date selected as  "+date1+" successfully");
+
+	}
+
+	public void selectExpiryDate(int Year,int Month,int Day){
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, Day);
+		cal.add(Calendar.MONTH, Month);
+		cal.add(Calendar.YEAR, Year);
+		Date date = cal.getTime();
+		SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat yr = new SimpleDateFormat("yyyy");
+		SimpleDateFormat month = new SimpleDateFormat("MM");
+		SimpleDateFormat day = new SimpleDateFormat("dd");
+		String yrs = yr.format(date);
+		String mon = month.format(date);
+		String dd = day.format(date);
+		if (dd.charAt(0)=='0'){
+			dd = dd.substring(1);
+		}
+		String date1 = format1.format(date);
+		logger.info("Policy Expiry date selected as "+date1+" successfully");
+		waitFor(1);
+		clickOnChooseDate();
+		waitFor(1);
+		driver.findElement(By.xpath("//button[text()='"+yrs+"']")).click();
+		waitFor(1);
+		String ccMonth=driver.findElement(By.xpath("//h6[@data-mui-test='calendar-month-text']")).getText();
+		//String ccMonth=quotePage.getCalendarMonth().getText();
+		int selectMonth=Integer.parseInt(mon);
+
+		int currentMonth=getMonthNumber(ccMonth);
+		if(selectMonth<currentMonth){
+			for (int i=1;i<=currentMonth-selectMonth;i++){
+				prevMonthAction();
+			}
+		}else {
+			for (int i=1;i<=selectMonth-currentMonth;i++){
+				nextMonthAction();
+			}
+		}
+		waitFor(1);
+		chooseDateUsingAction(dd);
+		logger.info("Policy Expiry date selected as "+date1+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "Policy Expiry date selected as  "+date1+" successfully");
+
 	}
 
 	public void selectDOB(String year) {
@@ -798,6 +928,20 @@ public class BaseTest {
 		});
 	}
 
+	public void chooseDateUsingAction(String Date) {
+		waitFor(1);
+		new FluentWait<>(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS)
+				.ignoring(StaleElementReferenceException.class).until(new Function() {
+			@Override
+			public Object apply(Object arg0) {
+				WebElement e = driver.findElement(By.xpath("//span[text()='"+Date+"']"));
+				Actions action = new Actions(driver);
+				action.moveToElement(e).click().perform();
+				return true;
+			}
+		});
+	}
+
 
 	public void enterTextAction(String text,int intance) {
 		waitFor(1);
@@ -850,6 +994,19 @@ public class BaseTest {
 				//WebElement e=quotePage.nextMonth;
 				Actions action = new Actions(driver);
 //				action.moveToElement(e).click().perform();
+				action.click(e).build().perform();
+				return true;
+			}
+		});
+	}
+
+	public void prevMonthAction() {
+		new FluentWait<>(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS)
+				.ignoring(StaleElementReferenceException.class).until(new Function() {
+			@Override
+			public Object apply(Object arg0) {
+				WebElement e = driver.findElement(By.xpath("//button[@aria-label='previous month']"));
+				Actions action = new Actions(driver);
 				action.click(e).build().perform();
 				return true;
 			}
@@ -1155,8 +1312,8 @@ public class BaseTest {
 		waitElement(quotePage.getIdvAmt(), 3);
 		assertThat(quotePage.getIdvAmt().isDisplayed(), equalTo(true));
 		String idvAmt=quotePage.getIdvAmt().getText().replaceAll("₹", "").replaceAll(",","").trim();
-		logger.info("verify premium amount "+idvAmt+" successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "verify premium amount "+idvAmt+" successfully");
+		logger.info("verify idv amount "+idvAmt+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "verify idv amount "+idvAmt+" successfully");
 		return idvAmt;
 	}
 
@@ -1409,8 +1566,8 @@ public class BaseTest {
 		waitElement(proposalPage.getVehicleLicenseNumber(), 6);
 		assertThat(proposalPage.getVehicleLicenseNumber().isDisplayed(), equalTo(true));
 		proposalPage.getVehicleLicenseNumber().sendKeys(vehicleNum);
-		logger.info("enter vehicleNumer successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "enter vehicleNumer successfully");
+		logger.info("enter vehicleNumer as "+vehicleNum+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "enter vehicleNumer AS "+vehicleNum+" successfully");
 	}
 
 
@@ -1418,8 +1575,8 @@ public class BaseTest {
 		waitElement(proposalPage.getVehicleChassisNumber(), 3);
 		assertThat(proposalPage.getVehicleChassisNumber().isDisplayed(), equalTo(true));
 		proposalPage.getVehicleChassisNumber().sendKeys(ChassisNumber);
-		logger.info("enter ChassisNumber successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "enter ChassisNumber successfully");
+		logger.info("enter ChassisNumber as "+ChassisNumber+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "enter ChassisNumber as "+ChassisNumber+" successfully");
 	}
 
 
@@ -1427,8 +1584,8 @@ public class BaseTest {
 		waitElement(proposalPage.getVehicleEngineNumber(), 3);
 		assertThat(proposalPage.getVehicleEngineNumber().isDisplayed(), equalTo(true));
 		proposalPage.getVehicleEngineNumber().sendKeys(EngineNumber);
-		logger.info("enter EngineNumber successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "enter EngineNumber successfully");
+		logger.info("enter EngineNumber as "+EngineNumber+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "enter EngineNumber as "+EngineNumber+" successfully");
 	}
 
 	public void enterPrevPolicyNum(String prevPolicyNum){
@@ -1637,9 +1794,51 @@ public class BaseTest {
 	}
 
 	public void selcectManufactureDate(String year){
-		selectPrevMonthDate(year);
-		logger.info("select manufacturing date successfully");
-		ExtentTestManager.getTest().log(LogStatus.PASS, "select manufacturing date successfully");
+
+	}
+
+	public void selectManufactureDate(int Year,int Month,int Day){
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, -Day);
+		cal.add(Calendar.MONTH, -Month);
+		cal.add(Calendar.YEAR, -Year);
+		Date date = cal.getTime();
+		SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat yr = new SimpleDateFormat("yyyy");
+		SimpleDateFormat month = new SimpleDateFormat("MM");
+		SimpleDateFormat day = new SimpleDateFormat("dd");
+		String yrs = yr.format(date);
+		String mon = month.format(date);
+		String dd = day.format(date);
+		if (dd.charAt(0)=='0'){
+			dd = dd.substring(1);
+		}
+		String date1 = format1.format(date);
+		logger.info("Registration date selected as "+date1+" successfully");
+		waitFor(1);
+		clickOnChooseDate();
+		waitFor(1);
+		driver.findElement(By.xpath("//button[text()='"+yrs+"']")).click();
+		waitFor(1);
+		String ccMonth=driver.findElement(By.xpath("//h6[@data-mui-test='calendar-month-text']")).getText();
+		//String ccMonth=quotePage.getCalendarMonth().getText();
+		int selectMonth=Integer.parseInt(mon);
+
+		int currentMonth=getMonthNumber(ccMonth);
+		if(selectMonth<currentMonth){
+			for (int i=1;i<=currentMonth-selectMonth;i++){
+				prevMonthAction();
+			}
+		}else {
+			for (int i=1;i<=selectMonth-currentMonth;i++){
+				nextMonthAction();
+			}
+		}
+		waitFor(1);
+		chooseDateUsingAction(dd);
+		logger.info("manufacturing date selected as "+date1+" successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "manufacturing date selected as  "+date1+" successfully");
+
 	}
 
 	public void selcectPrevPolExpDateBreakin(String year){

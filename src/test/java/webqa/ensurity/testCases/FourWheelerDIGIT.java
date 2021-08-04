@@ -74,7 +74,7 @@ public class FourWheelerDIGIT extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -117,13 +117,13 @@ public class FourWheelerDIGIT extends BaseTest {
         clickOnNextButton();
         entervehicleNumer("MH01DT" + randomeNum());
         //  entervehicleNumer("MH01AD5261");
-        selcectManufactureDate("2019");
+        selectManufactureDate(2,9,10);
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
         clickOnNextButton();
         selectFromDropDown("Bharti");
         enterPrevPolicyNum("AR00" + randomeNum8());
-        selectExpiryDate("2021");
+        selectExpiryDate(0,0,7);
         clickOnNext();
         clickOnReviewNSubmit();
         isPaymentPageDisplayed();
@@ -171,7 +171,7 @@ public class FourWheelerDIGIT extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -219,13 +219,13 @@ public class FourWheelerDIGIT extends BaseTest {
         clickOnNextButton();
         entervehicleNumer("MH01ED" + randomeNum());
         //  entervehicleNumer("MH01AD5261");
-        selcectManufactureDate("2018");
+        selectManufactureDate(3,2,9);
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
         clickOnNextButton();
         selectFromDropDown("Bharti");
         enterPrevPolicyNum("AR00" + randomeNum8());
-        selectExpiryDate("2021");
+        selectExpiryDate(0,0,7);
         clickOnNext();
         clickOnReviewNSubmit();
         waitFor(1);
@@ -275,7 +275,7 @@ public class FourWheelerDIGIT extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,4,5);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -321,21 +321,24 @@ public class FourWheelerDIGIT extends BaseTest {
         enterTextAction("Male",1);
         selectFromDropDown("Brother");
         clickOnNextButton();
-        entervehicleNumer("MH01EC" + randomeNum());
-        selcectManufactureDate("2018");
+        entervehicleNumer("MH01AC" + randomeNum());
+        selectManufactureDate(3,5,0);
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
         clickOnNextButton();
         if (polExpType.contains("90")){
             selectFromDropDown("Bharti");
             enterPrevPolicyNum("AR00" + randomeNum8());
-            selcectManufactureDate("2021");
+            selectExpiryDate(0,0,-45);
             clickOnNext();}
         clickOnReviewNSubmit();
-        isPaymentPageDisplayed();
-        isTotalPremiumEqualTo(premiumAnnualy);
         if (!policyType.equalsIgnoreCase("1yrTP")){
+            isBreakingPaymentPageDisplayed();
+            isTotalPremiumEqualTo(premiumAnnualy);
             isIDVEqualTo(idv);}
+        else {
+            isPaymentPageDisplayed();
+            isTotalPremiumEqualTo(premiumAnnualy);
         clickOnMakePayment();
         String parentWindow = driver.getWindowHandle();
         switchToChildWindow();
@@ -361,7 +364,7 @@ public class FourWheelerDIGIT extends BaseTest {
             logger.info(e.getAttribute("href"));
             String pdfurl=e.getAttribute("href");
             waitFor(1);
-            readPdfContent(pdfurl);}
+            readPdfContent(pdfurl);}}
     }
 
     @Test(priority = 1, groups = {"regression"}, dataProvider = "addons")
@@ -378,7 +381,7 @@ public class FourWheelerDIGIT extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,5,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -425,13 +428,13 @@ public class FourWheelerDIGIT extends BaseTest {
         clickOnNextButton();
         entervehicleNumer("MH01DT" + randomeNum());
         //  entervehicleNumer("MH01AD5261");
-        selcectManufactureDate("2018");
+        selectManufactureDate(3,5,14);
         enterChassisNumber("CH1234567" + randomeNum8());
         enterEngineNumber("EN1234567" + randomeNum8());
         clickOnNextButton();
         selectFromDropDown("Bharti");
         enterPrevPolicyNum("AR00" + randomeNum8());
-        selectExpiryDate("2021");
+        selectExpiryDate(0,0,7);
         clickOnNext();
         clickOnReviewNSubmit();
         isPaymentPageDisplayed();

@@ -163,7 +163,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -259,7 +259,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,1);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -359,7 +359,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -456,7 +456,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,2);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -560,7 +560,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,1);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -663,7 +663,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -757,7 +757,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,1);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -861,7 +861,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -944,7 +944,7 @@ public class FourWheeler extends BaseTest {
 //        enterRtoCode("HR05");
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(2,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1051,7 +1051,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,2);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -1154,7 +1154,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2019");
+        selectRegistrationDate(3,3,2);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1256,7 +1256,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,2,2);
         clickOnNext();
         selectPolicyExpiry(polExpType);
         if (polExpType.contains("90")){
@@ -1351,7 +1351,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         enterMMVDetails("MARUTI SUZUKI","Swift","LXI (1298 CC");
         enterRtoCode("DL01");
-        selectRegistrationDate("2019");
+        selectRegistrationDate(3,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1448,7 +1448,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         enterMMVDetails("HONDA","Accord","2.4 VTI L MT (2354 CC)");
         enterRtoCode("DL01");
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,4);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1548,7 +1548,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,4);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1649,7 +1649,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,6);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1741,7 +1741,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,9);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1835,7 +1835,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,4);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -1936,7 +1936,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,4);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
@@ -2016,7 +2016,7 @@ public class FourWheeler extends BaseTest {
         clickOnNextBtn();
         select4wMMV();
         rtoLocation();
-        selectRegistrationDate("2018");
+        selectRegistrationDate(3,9,5);
         clickOnNext();
         notExpYet();
         prevPolicyClaim("No");
