@@ -4,21 +4,18 @@
 <suite name="Regression Suite">
 
 	<listeners>
-		<listener class-name="webqa.ensurity.listener.TestListener" />
+		<listener class-name="webqa.bnb.listener.TestListener" />
 	</listeners>
 
 
 	<test name="Web-Automation">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="webqa.ensurity.testCases.FourWheelerBAJAJ">
-<!--			<class name="webqa.ensurity.testCases.FourWheelerHDFC_ERGO"/>-->
-<!--			<class name="webqa.ensurity.testCases.FourWheelerICICI_L"/>-->
-<!--			<class name="webqa.ensurity.testCases.FourWheelerDIGIT"/>-->
-<!--			<class name="webqa.ensurity.testCases.FourWheelerTATA_AIG"/>-->
-<!--			<class name="webqa.ensurity.testCases.FourWheelerReliance" >-->
+<!--			<class name="webqa.bnb.testCases.bnbWebsite">-->
+			<class name="webqa.bnb.testCases.SalesDashboard">
 				<methods>
-					<include name="verify4wRolloverPolicyPurchageWithAddonsForBajaj"></include>
+					<include name="verifyFirstCallCompletion"></include>
+<!--					<include name="verifyCreateQuotation"></include>-->
 				</methods>
 			</class>
 		</classes>

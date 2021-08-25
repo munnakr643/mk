@@ -2,19 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
   <listeners>
-    <listener class-name="webqa.ensurity.listener.TestListener"/>
+    <listener class-name="webqa.bnb.listener.TestListener"/>
   </listeners>
   <test thread-count="5" name="Web-Automation(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="webqa.ensurity.testCases.TwoWheelerTATA_AIG">
+      <class name="webqa.bnb.testCases.SalesDashboard">
         <methods>
-          <include name="setup"/>
+          <include name="verifyFirstCallCompletion"/>
           <include name="extentReportsFailOperation"/>
           <include name="tearDown"/>
-          <include name="verify2wRolloverPolicyPurchageWithTataAig" invocation-numbers="0 1"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- webqa.ensurity.testCases.TwoWheelerTATA_AIG -->
+      </class> <!-- webqa.bnb.testCases.SalesDashboard -->
     </classes>
   </test> <!-- Web-Automation(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

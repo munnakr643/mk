@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content failed suite-Regression_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="webqa.ensurity.testCases.TwoWheelerTATA_AIG" hash-for-method="verify2wRolloverPolicyPurchageWithTataAig(1yrCp)">verify2wRolloverPolicyPurchageWithTataAig(1yrCp)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="webqa.ensurity.testCases.TwoWheelerTATA_AIG" hash-for-method="verify2wRolloverPolicyPurchageWithTataAig(1yrTP)">verify2wRolloverPolicyPurchageWithTataAig(1yrTP)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="webqa.bnb.testCases.SalesDashboard" hash-for-method="verifyFirstCallCompletion">verifyFirstCallCompletion</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Regression_Suite -->
@@ -125,98 +120,42 @@
           <div class="suite-Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">webqa.ensurity.testCases.TwoWheelerTATA_AIG</span>
+              <span class="class-name">webqa.bnb.testCases.SalesDashboard</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verify2wRolloverPolicyPurchageWithTataAig(1yrCp)">
-                  </a> <!-- verify2wRolloverPolicyPurchageWithTataAig(1yrCp) -->
-                  <span class="method-name">verify2wRolloverPolicyPurchageWithTataAig</span>
-                  <span class="parameters">(1yrCp)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[text()=&apos;View Details&apos;]&apos; (tried for 120 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at webqa.ensurity.base.BaseTest.waitElement(BaseTest.java:138)
-	at webqa.ensurity.base.BaseTest.isPlanPageDisplayed(BaseTest.java:995)
-	at webqa.ensurity.testCases.TwoWheelerTATA_AIG.verify2wRolloverPolicyPurchageWithTataAig(TwoWheelerTATA_AIG.java:90)
+                  <a name="verifyFirstCallCompletion">
+                  </a> <!-- verifyFirstCallCompletion -->
+                  <span class="method-name">verifyFirstCallCompletion</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@aria-label=&apos;edit&apos;])[2]&quot;}
+  (Session info: chrome=104.0.5112.101)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;Munna-ks-MacBook-Pro.local&apos;, ip: &apos;2402:e280:2160:1f0:6cd2:e80f:7767:2060%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_301&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [420b4ccdc7e29b79aa7a429a856808b9, findElement {using=xpath, value=(//span[@aria-label=&apos;edit&apos;])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.101, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/k3/3_wxsl_s7tv...}, goog:chromeOptions: {debuggerAddress: localhost:50717}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50717/devtoo..., se:cdpVersion: 104.0.5112.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 420b4ccdc7e29b79aa7a429a856808b9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
+	at webqa.bnb.base.BaseTest.verifyIncompleteTaskPage(BaseTest.java:500)
+	at webqa.bnb.testCases.SalesDashboard.verifyFirstCallCompletion(SalesDashboard.java:60)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 	at webqa.ensurity.execution.Application.main(Application.java:36)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;View Details&apos;]&quot;}
-  (Session info: chrome=91.0.4472.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Munna-Yadavs-MacBook-Pro.local&apos;, ip: &apos;2402:e280:2160:1f0:e1b1:75c1:b738:ff2c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_271&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: /var/folders/7v/p8vklgj97_g...}, goog:chromeOptions: {debuggerAddress: localhost:64518}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9e2d0d3f06023e90f900cde329d2af44
-*** Element info: {Using=xpath, value=//span[text()=&apos;View Details&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verify2wRolloverPolicyPurchageWithTataAig(1yrTP)">
-                  </a> <!-- verify2wRolloverPolicyPurchageWithTataAig(1yrTP) -->
-                  <span class="method-name">verify2wRolloverPolicyPurchageWithTataAig</span>
-                  <span class="parameters">(1yrTP)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[text()=&apos;View Details&apos;]&apos; (tried for 120 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at webqa.ensurity.base.BaseTest.waitElement(BaseTest.java:138)
-	at webqa.ensurity.base.BaseTest.isPlanPageDisplayed(BaseTest.java:995)
-	at webqa.ensurity.testCases.TwoWheelerTATA_AIG.verify2wRolloverPolicyPurchageWithTataAig(TwoWheelerTATA_AIG.java:90)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at webqa.ensurity.execution.Application.main(Application.java:36)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;View Details&apos;]&quot;}
-  (Session info: chrome=91.0.4472.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Munna-Yadavs-MacBook-Pro.local&apos;, ip: &apos;2402:e280:2160:1f0:e1b1:75c1:b738:ff2c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_271&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: /var/folders/7v/p8vklgj97_g...}, goog:chromeOptions: {debuggerAddress: localhost:64620}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 87c2b698ee3760732ab2ff0ede65231c
-*** Element info: {Using=xpath, value=//span[text()=&apos;View Details&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 29 more
-... Removed 27 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -225,7 +164,7 @@ Session ID: 87c2b698ee3760732ab2ff0ede65231c
         </div> <!-- panel Regression_Suite -->
         <div panel-name="test-xml-Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/ensuredit/Documents/GitHub/qa_automation/Testng.xml</span>
+            <span class="header-content">/Users/munna_k/Documents/webQA/Testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -233,16 +172,16 @@ Session ID: 87c2b698ee3760732ab2ff0ede65231c
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Regression Suite&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;webqa.ensurity.listener.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;webqa.bnb.listener.TestListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Web-Automation&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;webqa.ensurity.testCases.TwoWheelerTATA_AIG&quot;&gt;
+      &lt;class name=&quot;webqa.bnb.testCases.SalesDashboard&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verify2wRolloverPolicyPurchageWithTataAig&quot;/&gt;
+          &lt;include name=&quot;verifyFirstCallCompletion&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- webqa.ensurity.testCases.TwoWheelerTATA_AIG --&gt;
+      &lt;/class&gt; &lt;!-- webqa.bnb.testCases.SalesDashboard --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Web-Automation --&gt;
 &lt;/suite&gt; &lt;!-- Regression Suite --&gt;
@@ -270,7 +209,7 @@ Session ID: 87c2b698ee3760732ab2ff0ede65231c
               <span class="test-group-name">regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verify2wRolloverPolicyPurchageWithTataAig</span>
+                <span class="method-in-group-name">verifyFirstCallCompletion</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -290,20 +229,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify2wRolloverPolicyPurchageWithTataAig')
-data.setCell(0, 2, 'webqa.ensurity.testCases.TwoWheelerTATA_AIG')
-data.setCell(0, 3, 163693);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verify2wRolloverPolicyPurchageWithTataAig')
-data.setCell(1, 2, 'webqa.ensurity.testCases.TwoWheelerTATA_AIG')
-data.setCell(1, 3, 157527);
+data.setCell(0, 1, 'verifyFirstCallCompletion')
+data.setCell(0, 2, 'webqa.bnb.testCases.SalesDashboard')
+data.setCell(0, 3, 78173);
 window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Regression_Suite">
               </div> <!-- times-div-Regression_Suite -->
             </div> <!-- times-div -->
@@ -322,11 +257,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">webqa.ensurity.testCases.TwoWheelerTATA_AIG</span>
+              <span class="ignored-class-name">webqa.bnb.testCases.SalesDashboard</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verify2wNewVehiclePolicyPurchageWithTataAig</span>
+                <span class="ignored-method-name">verifyCreateQuotation</span>
                 <br/>
-                <span class="ignored-method-name">verify2wBreakInPolicyPurchageWithTataAig</span>
+                <span class="ignored-method-name">verifyCrmLogin</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -338,7 +273,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">webqa.ensurity.testCases.TwoWheelerTATA_AIG</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">webqa.bnb.testCases.SalesDashboard</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
@@ -346,34 +281,16 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verify2wRolloverPolicyPurchageWithTataAig(1yrCp)</span>
-                <span class="method-start">6727 ms</span>
+                <span class="method-name">verifyFirstCallCompletion</span>
+                <span class="method-start">10058 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">extentReportsFailOperation([TestResult name=verify2wRolloverPolicyPurchageWithTataAig status=FAILURE method=TwoWheelerTATA_AIG....)</span>
-                <span class="method-start">170491 ms</span>
+                <span class="method-name">extentReportsFailOperation([TestResult name=verifyFirstCallCompletion status=FAILURE method=SalesDashboard.verifyFirstCallCompl...)</span>
+                <span class="method-start">88289 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">170826 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">170946 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verify2wRolloverPolicyPurchageWithTataAig(1yrTP)</span>
-                <span class="method-start">175958 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">extentReportsFailOperation([TestResult name=verify2wRolloverPolicyPurchageWithTataAig status=FAILURE method=TwoWheelerTATA_AIG....)</span>
-                <span class="method-start">333514 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">333788 ms</span>
+                <span class="method-start">88599 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
