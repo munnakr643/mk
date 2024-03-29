@@ -4,15 +4,15 @@
 <suite name="Regression Suite">
 
 	<listeners>
-		<listener class-name="webqa.bnb.listener.TestListener" />
+		<listener class-name="webqa.com.listener.TestListener" />
 	</listeners>
 
 
 	<test name="Web-Automation">
 		<parameter name="browser" value="chrome" />
 		<classes>
-<!--			<class name="webqa.bnb.testCases.bnbWebsite">-->
-			<class name="webqa.bnb.testCases.SalesDashboard">
+<!--			<class name="webqa.com.testCases.websiteTest">-->
+			<class name="webqa.com.testCases.DashboardTest">
 				<methods>
 					<include name="verifyFirstCallCompletion"></include>
 <!--					<include name="verifyCreateQuotation"></include>-->

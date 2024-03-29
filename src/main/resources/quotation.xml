@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Suite">
+
+    <listeners>
+        <listener class-name="webqa.com.listener.TestListener" />
+    </listeners>
+
+
+    <test name="Web-Automation">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="webqa.">
+
+                <!--				<methods>-->
+                <!--					<include name="verify2wRolloverPolicyPurchageWithDigitBeforeJuly2018withDiffrentNcb"></include>-->
+                <!--				</methods>-->
+            </class>
+        </classes>
+
+    </test>
+
+</suite>

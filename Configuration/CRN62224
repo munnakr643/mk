@@ -1,0 +1,292 @@
+CRN62224
+
+SDE","IS_ASSOCIATE","OS_ASSOCIATE","SCM_ASSOCIATE","SCM_HEAD","SCM_LEAD","VM_HEAD","VM_LEAD","SITE_ENGINEER_ASSOCIATE","CONTRACTOR","PROJECT_MANAGER_LEAD","PROJECT_MANAGEMENT_HEAD"]
+
+
+ajayinfras@gmail.com
+
+Darshanam ajay
+
+
+Darwin kumar
+darwin.architect@gmail.com
+8892478786
+
+Vinod Achar
+acharcreations@gmail.com
+
+ali3.khan@gmail.com
+Ali khan
+9845551060
+
+Imran Khan
+ikhan6554@gmail.com
+9886093786
+
+https://website-preprod.bricknbolt.com/construction-cost-per-square-feet?utm_source=google&utm_medium=cpc&utm_campaign=Search_Cost_Bangalore_BMM_Mobile-New&city=bengaluru
+
+https://website-preprod.bricknbolt.com/building-construction-company
+
+
+
+Hi Shreya,
+
+I have some query regarding my payroll
+
+1. I haven't received my BYOD in my last month salary. Do i need to something for it?
+2. I need to increase employee pf amount.please tell me the process
+3. When i will get 1 lac variable amount? 
+
+
+, shubhams@bricknbolt.com, tanujpathak@bricknbolt.com, sneha.kumari@bricknbolt.com
+
+
+@all Sanity has been done on Mobile and Web on prod regarding Sankranthi banner changes and changes are working fine on prod 
+Except two issues which is mentioned below
+1. construction request page is freezed on prod for mobile(unable to scroll up/down)
+2. Offer-code is not displaying on Sales Dashboards while create service request from chatbot
+
+
+
+Getting 500 error due to no outside sales available(CRM-768) bugs has been resolved after fixed First call submit issue(OS asigne) on prod and preprod 
+
+
+munna.kumar@bricknbolt.com, shubhams@bricknbolt.com, tanujpathak@bricknbolt.com, sneha.kumari@bricknbolt.com, kundan.kumar@bricknbolt.com ,arpit@bricknbolt.com
+
+
+Hi Priya
+
+I am
+
+
+
+CRN126929
+
+CRN126929
+CRN126930
+CRN126931
+CRN126932
+
+
+
+CRN126934
+
+CRN126963
+
+1.Interest level of customer
+
+Converted
+
+Important
+
+Interested
+
+In Middle
+
+Low level interest
+
+Dead
+
+extra field(Almost In) and not in order according to docs
+
+2.When customer wants to start the project ? should be Month-Year (MM-YY) according document
+
+3.Comment inead of MOM
+
+4Plot location only
+5 latitude longitude need to remove
+
+Number of family members should be mandator
+
+cd existing_repo
+git remote add origin https://gitlab.com/bnbapp/automation/consumer-app-automation/appUIAutomation.git
+git branch -M main
+git push -uf origin main
+
+
+
+@FindBy(xpath = "//span[text()='Comprehensive'] | //span[text()='SAOD']| //span[text()='Third Party']|//*[contains(text(),'TP')]")
+	@CacheLookup
+	public WebElement cpPolTypePaymentPage;
+
+
+	public void enterOtp()  {
+		waitElement(loginPage.getOtpbox1(), 20);
+		assertThat(loginPage.getOtpbox1().isDisplayed(), equalTo(true));
+		String otp=readconfig.getPassword();
+		for(int i=1;i<=otp.length();i++){
+			String num= String.valueOf(otp.charAt(i-1));
+			String e="Digit "+i;
+			WebElement enterotp=driver.findElement(By.xpath("//input[contains(@aria-label,'"+e+"')]"));
+			enterotp.sendKeys(num);
+		}
+		logger.info("otp " +otp+ " Enter successfully");
+		ExtentTestManager.getTest().log(LogStatus.PASS, "otp " +otp+ " Enter successfully");
+		waitFor(1);
+	}
+
+
+	Sunil reddy	8861189116	
+Bengaluru
+
+usreddy0133@gmail.com
+
+Sudhakar reddy b	9160044359	
+Hyderabad
+
+sselectricals.nc@gmail.com
+
+ravi.cements@yahoo.com-Ravi cements
+
+
+Brick&Bolt is a leading construction company in Bangalore, Hyderabad, and Mysore that manages the complete house-building process from beginning to end. From the initial site survey to the design phase, construction, and finally moving in, we've got you covered. Brick&Bolt is the most cost-effective house construction firm that will help you with the exact cost of farmhouse construction. Also, we have professional architects who design the farmhouse blueprints for clients as per their requirements and needs. We've collaborated with the best farmhouse construction contractors who can complete the job quickly and efficiently. We do thorough quality assurance inspections to ensure that only the best is delivered.
+
+Building your dream home comes with a huge set of responsibilities and expectations. You want everything perfect and for that, you want someone who you can trust. Someone who is a certified professional in the construction business. The market is flooded with building contractors but Brick&Bolt will go a long way in directing you away from shady contractors and help you work with the most reputable building contractors in Bangalore.
+
+
+
+Brick&Bolt provides the best house construction services in Bangalore, Mysore, and Hyderabad. Build your dream home from the comfort of your smartphone with India’s No.1 Tech-Enabled Construction Company. A home with 0 delays, 0 defects & 310+ quality checks, 100% safe reliable, and transparent money transactions. Thinking Home Construction, Think Brick&Bolt!
+
+
+https://brickandbolt.atlassian.net/browse/CRM-988
+https://brickandbolt.atlassian.net/browse/CRM-999
+https://brickandbolt.atlassian.net/browse/CRM-992
+https://brickandbolt.atlassian.net/browse/CRM-989
+https://brickandbolt.atlassian.net/browse/CRM-994
+https://brickandbolt.atlassian.net/browse/CRM-995
+https://brickandbolt.atlassian.net/browse/CRM-991
+https://brickandbolt.atlassian.net/browse/CHPA-85
+https://brickandbolt.atlassian.net/browse/CHPA-99
+https://brickandbolt.atlassian.net/browse/CHPA-100
+https://brickandbolt.atlassian.net/browse/CHPA-101
+https://brickandbolt.atlassian.net/browse/CHPA-102
+https://brickandbolt.atlassian.net/browse/CHPA-105
+https://brickandbolt.atlassian.net/browse/CHPA-93
+https://brickandbolt.atlassian.net/browse/CHPA-103
+https://brickandbolt.atlassian.net/browse/CHPA-104
+https://brickandbolt.atlassian.net/browse/CHPA-114
+https://brickandbolt.atlassian.net/browse/CRM-971
+https://brickandbolt.atlassian.net/browse/CRM-972
+https://brickandbolt.atlassian.net/browse/CRM-982
+https://brickandbolt.atlassian.net/browse/CHPA-107
+https://brickandbolt.atlassian.net/browse/CHPA-108
+https://brickandbolt.atlassian.net/browse/CHPA-109
+https://brickandbolt.atlassian.net/browse/CHPA-110
+https://brickandbolt.atlassian.net/browse/CHPA-111
+https://brickandbolt.atlassian.net/browse/CHPA-90
+https://brickandbolt.atlassian.net/browse/CHPA-92
+https://brickandbolt.atlassian.net/browse/CHPA-119
+https://brickandbolt.atlassian.net/browse/CHPA-120
+https://brickandbolt.atlassian.net/browse/CHPA-121
+https://brickandbolt.atlassian.net/browse/CRM-1002
+https://brickandbolt.atlassian.net/browse/CRM-1007
+https://brickandbolt.atlassian.net/browse/CRM-1008
+https://brickandbolt.atlassian.net/browse/CRM-1012
+https://brickandbolt.atlassian.net/browse/CRM-976
+https://brickandbolt.atlassian.net/browse/CRM-980
+https://brickandbolt.atlassian.net/browse/CRM-983
+https://brickandbolt.atlassian.net/browse/CRM-996
+https://brickandbolt.atlassian.net/browse/CRM-1000
+https://brickandbolt.atlassian.net/browse/CRM-1001
+https://brickandbolt.atlassian.net/browse/CRM-1003
+https://brickandbolt.atlassian.net/browse/CRM-1004
+https://brickandbolt.atlassian.net/browse/CHPA-118
+https://brickandbolt.atlassian.net/browse/CRM-1007
+https://brickandbolt.atlassian.net/browse/CRM-1008
+https://brickandbolt.atlassian.net/browse/CRM-1012
+
+7795100125	anand01enterprises@gmail.com
+Anand enterprises
+
+/ Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String input = "Hello India";
+        
+        String arrayInput[]= input.split(" ");
+        String output = "";
+        for(int i=0;i<arrayInput.length;i++)
+        {
+            String temp =reverseString( arrayInput[i]);
+            output =output+ " "+ temp;
+        }
+        System.out.println(output);
+    }
+    private static S
+ private static String reverseString(String input)
+    {
+        String reverse = "";
+
+
+
+
+
+
+        String input = "Arun kumar";
+  String output = "";
+  String array[] = input.split(" ");
+  for(int i=0;array.length>i;i++)
+  {
+      String temp = array[i];
+      
+      for(int j= temp.length()-1;j>=0;j--)
+      {
+          output = output + temp.charAt(j);
+      }
+       output =  output +" ";
+  }
+        
+        System.out.println(output); 
+
+
+        
+        
+        for(int i=input.length()-1;i>=0;i--)
+        {
+            reverse = reverse+input.charAt(i);
+        }
+        return reverse;
+    }
+}
+
+
+{  "_id": {    "$oid": "629100b356f19d4556c6c59f"  },  "account": "PM",  "crnId": "CRN144695",  "city": "BNG_KA_IN",  "createdDate": {    "$date": {      "$numberLong": "1617701687125"    }  },  "transactionDate": {    "$date": {      "$numberLong": "1527445800000"    }  },  "amount": 500000,  "transactionType": "CREDIT",  "transactionDescription": "Booking Amount",  "transferType": "CUSTOMER_TRANSFER",  "payeeAccountNumber": "50200031628701",  "payeeName": "BricknBolt",  "payeeEmail": "jayesh@bricknbolt.com",  "mapped": true,  "stageNumber": 0,  "_class": "com.bricknbolt.transaction.model.Transaction"}
+
+
+
+Thank you Arpit and Ajith,
+
+This keeps me motivatong,will do my best to gain your more confidend.
+
+
+Os To Rm Handover>3 task created(Site visit by OS,Handover to PM,Handover to RM)
+
+
+Submit SQ and collect booking amoi
+
+{  "_id": {    "$oid": "628f014056f19d4556c6c28c"  },  "modifiedDate": {    "$date": {      "$numberLong": "1654253622265"    }  },  "createdDate": {    "$date": {      "$numberLong": "1653539136335"    }  },  "uniqueId": "CRN144508",  "name": "Nithya",  "phone": "9940430273",  "email": "kumard_be@yahoo.com",  "location": "Valasaravakkam, Chennai, Tamil Nadu, India",  "city": "MAS_TN_IN",  "customerInformation": {    "location": {      "latitude": -1,      "longitude": -1,      "locationType": "customer_location"    }  },  "noOfFloors": 3,  "constructionPurpose": "Rental",  "plotInformation": {    "plotArea": 2304,    "areaUnit": "sqft",    "isPlotRegistrationDone": true,    "plotLocationCoordinates": {      "latitude": 13.0402725,      "longitude": 80.1722913,      "locationType": "plot_location"    },    "rockyTerrain": "DONT_KNOW",    "distanceFromMainRoad": 50,    "heightFromMainRoad": 3,    "plotDimensions": "40x60"  },  "estimatedProjectStartDate": "2022-06-03",  "srInterestLevel": "interested",  "isEarlyStage": false,  "adminSRStatus": "working_on_sq",  "isBnBUspExplained": true,  "isQuotationProvided": false,  "isCustomerGoingForLoan": false,  "isKhataInCustomerName": true,  "employeeId": "302c7d28-c989-4bd6-93cc-9276c8f6378a",  "insideSalesEmployeeId": "77dd165b-ffac-4349-b00f-c2b08bdd2c56",  "outsideSalesEmployeeId": "302c7d28-c989-4bd6-93cc-9276c8f6378a",  "schedulerEmployeeId": "d99b1d91-ddc7-49d0-962b-70f41c5f3011",  "csComments": "Edited from Service Request Page",  "comments": [    {      "createdAt": "26/05/2022",      "employeeId": "61c95655c5a3406d1f4678ff",      "employeeName": "Ashashree S",      "comment": "valasaravakkam Chennai, \nPlot size- 2340sqft\nG+2\nRental purpose\nself funding\nReady to start within 10days(june 4th)\nRegistered,(patta- applied for it 3weeks back).\nclient ready to meet F2F ASAP for further discussions.",      "createdDate": {        "$date": {          "$numberLong": "1653544237854"        }      }    },    {      "createdAt": "26/05/2022 11:21:10 IST",      "employeeId": "77dd165b-ffac-4349-b00f-c2b08bdd2c56",      "employeeName": "System",      "comment": "Call Made By Ashashree S (asha.s@bricknbolt.com)  Response: FIX_SLOT_CUSTOMER",      "createdDate": {        "$date": {          "$numberLong": "1653544270803"        }      }    },    {      "createdAt": "26/05/2022",      "employeeId": "61c95655c5a3406d1f4678ff",      "employeeName": "Ashashree S",      "comment": "Edited from Service Request Page",      "createdDate": {        "$date": {          "$numberLong": "1653544674047"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "620a4b6b2933ee6172450883",      "employeeName": "Ashritha Gowda",      "comment": "Edited from Service Request Page",      "createdDate": {        "$date": {          "$numberLong": "1653627027736"        }      }    },    {      "createdAt": "27/05/2022",      "employeeName": "System",      "comment": "Meeting is started by :Sakthi G on date :27/05/2022. Location of the meeting is : https://maps.google.com?q=13.0373975,80.1708152",      "createdDate": {        "$date": {          "$numberLong": "1653645524334"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Aniti termite treatment to be added at cost",      "createdDate": {        "$date": {          "$numberLong": "1653648574298"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "UPS wiring, rainwater harvesting",      "createdDate": {        "$date": {          "$numberLong": "1653649452108"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Septik Tank . Client is saying 12000L",      "createdDate": {        "$date": {          "$numberLong": "1653650002641"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Grills to be provided before every door for each of the 5 dwelling units plus a grill gate for terrace along with compound wall gate",      "createdDate": {        "$date": {          "$numberLong": "1653650436553"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Balconies and Utilities have to be covered with MS Grills",      "createdDate": {        "$date": {          "$numberLong": "1653650468924"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Kitchens to be provided with lofts & slabs \nAll Bedrooms to be provided with loft and shelves",      "createdDate": {        "$date": {          "$numberLong": "1653650902766"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Coolant Tiles on the Terrace to be done",      "createdDate": {        "$date": {          "$numberLong": "1653650934562"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Ultra tech cement to be added everywhere",      "createdDate": {        "$date": {          "$numberLong": "1653651426469"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "WPC doors for the bathrooms instead of flush doors",      "createdDate": {        "$date": {          "$numberLong": "1653651468910"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "SS railings to be added for staircase railing",      "createdDate": {        "$date": {          "$numberLong": "1653651535606"        }      }    },    {      "createdAt": "27/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "Edited from Service Request Page",      "createdDate": {        "$date": {          "$numberLong": "1653653270213"        }      }    },    {      "createdAt": "27/05/2022",      "employeeName": "System",      "comment": "Meeting is completed by :Sakthi G on date :27/05/2022. Location of the complete meeting is : https://maps.google.com?q=13.0379076,80.1701046",      "createdDate": {        "$date": {          "$numberLong": "1653653540374"        }      }    },    {      "createdAt": "29/05/2022",      "employeeName": "System",      "comment": "Meeting Notes: \nAre Customer Requirements Put in the CRM ?: true\nIs USPs Explained ?: true\nIs Rough Quotation Given ?: true\nIs Project Pages Shown ?: true\nIs Quality Checks Shown?: true\nIs Running Projects Shown?: true\n",      "createdDate": {        "$date": {          "$numberLong": "1653846702946"        }      }    },    {      "createdAt": "29/05/2022",      "employeeName": "System",      "comment": "Customer Notes: \nStart Date: Thu Jun 02 18:30:00 UTC 2022\nLoan Status: approved\nLand Registration Status: approved\nApproval Status: notStarted\nDoescustomer has floorplans? : true\nHas Customer Contacted other Customers? : true\nIs Project Start Delayed ?: true\nComments ? A family of 4 members. Husband, wife and 2 kids (boy of 8 yrs old and girl child of 3 yrs). Interested for constructing building for rental purposes.\n",      "createdDate": {        "$date": {          "$numberLong": "1653846702946"        }      }    },    {      "createdAt": "31/05/2022",      "employeeId": "6274af87ca6a7b7ab729bdd1",      "employeeName": "Sakthi G",      "comment": "SSM to change to Brick masonry\nAAC Blocks of 8 and 6 inches\nAdditional main doors to be removed from the incremental cost\nPlinth height - Total of 3ft\nCooling Tiles - On the terrace (Part of the cost)",      "createdDate": {        "$date": {          "$numberLong": "1653996611314"        }      }    },    {      "createdAt": "02/06/2022",      "employeeId": "61de7389b722123d736fba04",      "employeeName": "Munna kumar",      "comment": "Edited from Service Request Page",      "createdDate": {        "$date": {          "$numberLong": "1654155937560"        }      }    },    {      "createdAt": "02/06/2022",      "employeeName": "System",      "comment": "Site Inspection Notes: \nDetails provided by Customer \nDifference in level of the site with respect to the centre of the road?: Above Road Level\nOffsets provided by three neighbours; by looking towards road (in feet) \nLeft Neighbour: Space avaliable \nRight Neighbour: Space available \nBack Neighbour: Yes. Available \n\nDistance from plot to store the material (in feet): 3\nIs there any slope in the plot? : dontknow\nWidth of the road at site for access by a truck?: 30\nRoad traffic conditions at the plot: Spacious. Less traffic\nAny other observations which can affect the cost or design of plans?: Foundation may be raised a little deeper as per client feedback.\n\nSite Image Urls: null\nVideo Urls: null\nIs there rockyTerrain: DONT_KNOW\nDistance from the main road: 50.0\nHeight from the main road: 3.0\n",      "createdDate": {        "$date": {          "$numberLong": "1654156324919"        }      }    }  ],  "projectSize": 12877248,  "utmSource": "google",  "utmMedium": "cpc_new_sitelink_calculator",  "utmContent": "chatbot",  "serviceRequestSource": "customer_call",  "language": "tamil",  "adSource": "DIGITAL",  "hasFinalDesignVersion": false,  "constructionType": "residential",  "projectType": "NEW_PROJECT",  "unitsInProject": [    "ResidentialUnit"  ],  "rulingBody": [    "CMDA"  ],  "roadFacingSideDirection": [],  "nonDiscountedProjectValue": 12795648,  "isPackageOrBoq": "PACKAGE",  "packageSelected": [    "FHC_C_P3_MAS_TN_IN"  ],  "hearAboutBricknBolt": "marketing_ads",  "_class": "com.bnb.crmbackend.model.ServiceRequest"}
+
+
+
+radha -k
+
+Radha kumari2:02 PM
+String str="Radha kumari";
+	String arr[]=str.split(" ");
+	for(int i=0;i<arr.length;i++) {
+		for(int j=arr[i].length()-1;j>=0;j--) {
+			System.out.print(arr[i].charAt(j));
+		}
+		System.out.print(" ");
+			
+		}
+	}
+		
+		
+}
+
+
+{  "_id": {    "$oid": "62a1848655f6b03d93640b39"  },  "createdBy": "7c1dcddd-d0b2-4c7d-b81f-8afe80489d43",  "tenantId": "602cee678543e2d2c4eeac9f",  "taskType": "MEETING_CUSTOMER_SITELOCATION",  "taskStatus": "INIT",  "requestId": "62a1ba6dde725a793fa59699",  "assignedToId": "a01c1110-533a-4124-919e-db923a905220",  "assignedToName": "Kundan Kumar",  "createdDate": {    "$date": {      "$numberLong": "1654756486597"    }  },  "updatedDate": {    "$date": {      "$numberLong": "1654756486597"    }  },  "completedDate": {    "$date": {      "$numberLong": "1654770971723"    }  },  "actualCompletedDate": {    "$date": {      "$numberLong": "1654770971723"    }  },  "isCritical": true,  "counter": 1,  "crnId": "CRN131599",  "clientName": "TeststsQAAA",  "phone": "8901207654",  "isNotification": false,  "city": "BNG_KA_IN",  "adSource": "DIGITAL",  "insideSalesEmployeeId": "7c1dcddd-d0b2-4c7d-b81f-8afe80469d43",  "_class": "com.bricknbolt.taskservice.Model.Task"}
+

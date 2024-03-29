@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Regression_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="webqa.bnb.testCases.SalesDashboard" hash-for-method="verifyFirstCallCompletion">verifyFirstCallCompletion</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression_Suite" title="webqa.com.testCases.DashboardTest" hash-for-method="verifyFirstCallCompletion">verifyFirstCallCompletion</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Regression_Suite -->
@@ -120,7 +120,7 @@
           <div class="suite-Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">webqa.bnb.testCases.SalesDashboard</span>
+              <span class="class-name">webqa.com.testCases.DashboardTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -128,35 +128,52 @@
                   <a name="verifyFirstCallCompletion">
                   </a> <!-- verifyFirstCallCompletion -->
                   <span class="method-name">verifyFirstCallCompletion</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@aria-label=&apos;edit&apos;])[2]&quot;}
-  (Session info: chrome=104.0.5112.101)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
-System info: host: &apos;Munna-ks-MacBook-Pro.local&apos;, ip: &apos;2402:e280:2160:1f0:6cd2:e80f:7767:2060%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_301&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [420b4ccdc7e29b79aa7a429a856808b9, findElement {using=xpath, value=(//span[@aria-label=&apos;edit&apos;])[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.101, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/k3/3_wxsl_s7tv...}, goog:chromeOptions: {debuggerAddress: localhost:50717}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50717/devtoo..., se:cdpVersion: 104.0.5112.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 420b4ccdc7e29b79aa7a429a856808b9
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
-	at webqa.bnb.base.BaseTest.verifyIncompleteTaskPage(BaseTest.java:500)
-	at webqa.bnb.testCases.SalesDashboard.verifyFirstCallCompletion(SalesDashboard.java:60)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at webqa.ensurity.execution.Application.main(Application.java:36)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate
+                      element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@aria-label=&apos;edit&apos;])[2]&quot;}
+                      (Session info: chrome=104.0.5112.101)
+                      For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+                      Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+                      System info: host: &apos;Munna-ks-MacBook-Pro.local&apos;, ip: &apos;2402:e280:2160:1f0:6cd2:e80f:7767:2060%en0&apos;,
+                      os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;,
+                      java.version: &apos;1.8.0_301&apos;
+                      Driver info: org.openqa.selenium.chrome.ChromeDriver
+                      Command: [420b4ccdc7e29b79aa7a429a856808b9, findElement {using=xpath, value=(//span[@aria-label=&apos;edit&apos;])[2]}]
+                      Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.101,
+                      chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir:
+                      /var/folders/k3/3_wxsl_s7tv...}, goog:chromeOptions: {debuggerAddress: localhost:50717},
+                      javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC,
+                      platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50717/devtoo..., se:cdpVersion:
+                      104.0.5112.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0,
+                      pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify,
+                      webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true,
+                      webauthn:virtualAuthenticators: true}
+                      Session ID: 420b4ccdc7e29b79aa7a429a856808b9
+                      at
+                      org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+                      at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+                      at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+                      at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+                      at
+                      org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+                      at
+                      org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+                      at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+                      at
+                      org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+                      at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+                      at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+                      at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+                      at
+                      org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+                      at
+                      org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+                      at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
+                      at webqa.com.base.BaseTest.verifyIncompleteTaskPage(BaseTest.java:500)
+                      at webqa.com.testCases.DashboardTest.verifyFirstCallCompletion(SalesDashboard.java:60)
+                      at java.util.ArrayList.forEach(ArrayList.java:1259)
+                      at webqa.ensurity.execution.Application.main(Application.java:36)
+                      ... Removed 28 stack frames
+                  </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,16 +189,16 @@ Session ID: 420b4ccdc7e29b79aa7a429a856808b9
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Regression Suite&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;webqa.bnb.listener.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;webqa.com.listener.TestListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Web-Automation&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;webqa.bnb.testCases.SalesDashboard&quot;&gt;
+      &lt;class name=&quot;webqa.com.testCases.DashboardTest&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;verifyFirstCallCompletion&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- webqa.bnb.testCases.SalesDashboard --&gt;
+      &lt;/class&gt; &lt;!-- webqa.com.testCases.DashboardTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Web-Automation --&gt;
 &lt;/suite&gt; &lt;!-- Regression Suite --&gt;
@@ -222,21 +239,21 @@ Session ID: 420b4ccdc7e29b79aa7a429a856808b9
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Regression_Suite');
-function tableData_Regression_Suite() {
-var data = new google.visualization.DataTable();
-data.addColumn('number', 'Number');
-data.addColumn('string', 'Method');
-data.addColumn('string', 'Class');
-data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyFirstCallCompletion')
-data.setCell(0, 2, 'webqa.bnb.testCases.SalesDashboard')
-data.setCell(0, 3, 78173);
-window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
-return data;
-}
+                  suiteTableInitFunctions.push('tableData_Regression_Suite');
+                  function tableData_Regression_Suite() {
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('number', 'Number');
+                  data.addColumn('string', 'Method');
+                  data.addColumn('string', 'Class');
+                  data.addColumn('number', 'Time (ms)');
+                  data.addRows(1);
+                  data.setCell(0, 0, 0)
+                  data.setCell(0, 1, 'verifyFirstCallCompletion')
+                  data.setCell(0, 2, 'webqa.com.testCases.DashboardTest')
+                  data.setCell(0, 3, 78173);
+                  window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
+                  return data;
+                  }
               </script>
               <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Regression_Suite">
@@ -257,7 +274,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">webqa.bnb.testCases.SalesDashboard</span>
+              <span class="ignored-class-name">webqa.com.testCases.DashboardTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">verifyCreateQuotation</span>
                 <br/>
@@ -273,7 +290,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">webqa.bnb.testCases.SalesDashboard</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">webqa.com.testCases.DashboardTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>

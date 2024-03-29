@@ -5,12 +5,12 @@
   <suite name="Regression Suite" duration-ms="88876" started-at="2022-08-18T18:21:48 IST" finished-at="2022-08-18T18:23:17 IST">
     <groups>
       <group name="regression">
-        <method signature="SalesDashboard.verifyFirstCallCompletion()[pri:1, instance:webqa.bnb.testCases.SalesDashboard@5b87ed94]" name="verifyFirstCallCompletion" class="webqa.bnb.testCases.SalesDashboard"/>
+        <method signature="SalesDashboard.verifyFirstCallCompletion()[pri:1, instance:webqa.com.testCases.DashboardTest@5b87ed94]" name="verifyFirstCallCompletion" class="webqa.com.testCases.DashboardTest"/>
       </group> <!-- regression -->
     </groups>
     <test name="Web-Automation" duration-ms="88876" started-at="2022-08-18T18:21:48 IST" finished-at="2022-08-18T18:23:17 IST">
-      <class name="webqa.bnb.testCases.SalesDashboard">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:webqa.bnb.testCases.SalesDashboard@5b87ed94]" name="setup" is-config="true" duration-ms="10057" started-at="2022-08-18T18:21:48 IST" finished-at="2022-08-18T18:21:58 IST">
+      <class name="webqa.com.testCases.DashboardTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:webqa.com.testCases.DashboardTest@5b87ed94]" name="setup" is-config="true" duration-ms="10057" started-at="2022-08-18T18:21:48 IST" finished-at="2022-08-18T18:21:58 IST">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="verifyFirstCallCompletion()[pri:1, instance:webqa.bnb.testCases.SalesDashboard@5b87ed94]" name="verifyFirstCallCompletion" duration-ms="78173" started-at="2022-08-18T18:21:58 IST" finished-at="2022-08-18T18:23:16 IST">
+        <test-method status="FAIL" signature="verifyFirstCallCompletion()[pri:1, instance:webqa.com.testCases.DashboardTest@5b87ed94]" name="verifyFirstCallCompletion" duration-ms="78173" started-at="2022-08-18T18:21:58 IST" finished-at="2022-08-18T18:23:16 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@aria-label='edit'])[2]"}
@@ -35,7 +35,7 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 Session ID: 420b4ccdc7e29b79aa7a429a856808b9]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@aria-label='edit'])[2]"}
+                <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@aria-label='edit'])[2]"}
   (Session info: chrome=104.0.5112.101)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.4', revision: '535d840ee2'
@@ -62,8 +62,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
-at webqa.bnb.base.BaseTest.verifyIncompleteTaskPage(BaseTest.java:500)
-at webqa.bnb.testCases.SalesDashboard.verifyFirstCallCompletion(SalesDashboard.java:60)
+at webqa.com.base.BaseTest.verifyIncompleteTaskPage(BaseTest.java:500)
+at webqa.com.testCases.DashboardTest.verifyFirstCallCompletion(SalesDashboard.java:60)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -96,22 +96,22 @@ at webqa.ensurity.execution.Application.main(Application.java:36)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFirstCallCompletion -->
-        <test-method status="PASS" signature="extentReportsFailOperation(org.testng.ITestResult)[pri:0, instance:webqa.bnb.testCases.SalesDashboard@5b87ed94]" name="extentReportsFailOperation" is-config="true" duration-ms="310" started-at="2022-08-18T18:23:16 IST" finished-at="2022-08-18T18:23:17 IST">
+        <test-method status="PASS" signature="extentReportsFailOperation(org.testng.ITestResult)[pri:0, instance:webqa.com.testCases.DashboardTest@5b87ed94]" name="extentReportsFailOperation" is-config="true" duration-ms="310" started-at="2022-08-18T18:23:16 IST" finished-at="2022-08-18T18:23:17 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyFirstCallCompletion status=FAILURE method=SalesDashboard.verifyFirstCallCompletion()[pri:1, instance:webqa.bnb.testCases.SalesDashboard@5b87ed94] output={null}]]]>
+                  <![CDATA[[TestResult name=verifyFirstCallCompletion status=FAILURE method=SalesDashboard.verifyFirstCallCompletion()[pri:1, instance:webqa.com.testCases.DashboardTest@5b87ed94] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportsFailOperation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:webqa.bnb.testCases.SalesDashboard@5b87ed94]" name="tearDown" is-config="true" duration-ms="240" started-at="2022-08-18T18:23:17 IST" finished-at="2022-08-18T18:23:17 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:webqa.com.testCases.DashboardTest@5b87ed94]" name="tearDown" is-config="true" duration-ms="240" started-at="2022-08-18T18:23:17 IST" finished-at="2022-08-18T18:23:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- webqa.bnb.testCases.SalesDashboard -->
+      </class> <!-- webqa.com.testCases.DashboardTest -->
     </test> <!-- Web-Automation -->
   </suite> <!-- Regression Suite -->
 </testng-results>
